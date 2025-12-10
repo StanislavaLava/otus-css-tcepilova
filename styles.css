@@ -1,0 +1,25 @@
+@import '/fonts.css';
+
+
+blockquote {
+    font-family: "Bitter";
+    font-weight: 400;
+}
+
+body {
+    font-family: "Roboto";
+
+}
+
+h3 {
+font-weight: 700;
+
+}
+
+footer {
+    font-family: "Roboto";
+}
+p {
+    
+    font-weight: 400;
+}
