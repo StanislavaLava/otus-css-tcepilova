@@ -1,143 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>Mod</h1>
-      <nav>
-        <ul>
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#designers">Designers</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#strong-points">Strong points</a></li>
-        </ul>
-        <img src="img/Union.svg" alt="Message icon">
-      </nav>
-    </header>
-    <main>
-      <section id="hero-section">
-        <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
-        <h2>Mod Studio</h2>
-        <p>Modern Web Studio</p>
-      </section>
 
-      <section id="biography">
-        <h3>Biography</h3>
-        <img src="img/biography.jpg" alt="Woman walking across sand dunes" />
-        <h4>Katya Mills</h4>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-        <!-- <img src="img/rectangle.svg" alt="rectangle"> для создания "черточки" использовать лучше потом псевдоэлементы в стилях -->
-        <p>
-          Art Director
-          <br />
-          Scenography / Styling / Creative Photography / Design
-        </p>
-        <blockquote>
-          "The more I deal with the work as something that is my own, as
-          something that is personal, the more successful it is."
-        </blockquote>
-      </section>
+<body>
+  <header class="header">
+    <h1 class="logo">Mod</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#designers">Designers</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#strong-points">Strong points</a></li>
+      </ul>
+      <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+    </nav>
+  </header>
 
-      <section id="designers">
-        <h3>Designers</h3>
-        <figure>
-          <img src="img/designers-1.jpg" alt="Girl standing in an open field" />
-          <figcaption>
-            <h3>Jess Wonder</h3>
-            <p>
-              From/ Be more flower<br />
-              Skills/ Design Strategy / Marketing
-            </p>
-          </figcaption>
-        </figure>
-        <figure>
-          <img
-            src="img/designers-2.jpg"
-            alt="Hands holding a folder and a notebook"
-          />
-          <figcaption>
-            <h3>Kameron Clein</h3>
-            <p>
-              From/ Be more flower<br />
-              Skills/ Design Strategy / Marketing
-            </p>
-          </figcaption>
-        </figure>
-        <figure>
-          <img
-            src="img/designers-3.jpg"
-            alt="Hands holding glasses,coffee and a notebook"
-          />
-          <figcaption>
-            <h3>Loisse Red</h3>
-            <p>
-              From/ Be more flower<br />
-              Skills/ Design Strategy / Marketing
-            </p>
-          </figcaption>
-        </figure>
-      </section>
+  <main class="main content">
+    <section class="hero-section" id="hero-section">
+      <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
+      <h2 class="hero-section__title">Mod Studio</h2>
+      <p class="hero-section__info">Modern Web Studio</p>
+    </section>
 
-      <section id="testimonials">
-        <h3>Testimonials</h3>
-        <p>Website</p>
-        <a href="#">www.whitepapers.com</a>
-        <p>Brand Image</p>
-        <a href="#">www.whitepapers.com</a>
-        <p>Creativity</p>
-        <a href="#">www.whitepapers.com</a><br />
-        <img src="img/testimonials-1.jpg" alt="Modern Cafe Interior" />
-        <img
-          src="img/testimonials-2.jpg"
-          alt="Person walking with a mesh tote bag"/>
-        <blockquote>
-          I just really want to do good work and work with some great people,
-          people who challenge me.
-        </blockquote>
-      </section>
 
-      <section id="strong-points">
-        <h3>Strong points</h3>
-        <img
-          src="img/strong-points-1.jpg"
-          alt="Interior with bright modern furniture and a plant"
-        />
-        <img
-          src="img/strong-points-2.jpg"
-          alt="Interior with wooden soft chair"
-        />
-        <ul>
-          <li>Strengths</li>
-          <li>Interiors</li>
-          <li>Outdoors</li>
-          <li>Styling</li>
-          <li>Events</li>
-          <li>Architecture</li>
-          <li>Design</li>
-          <li>Celebrations</li>
-          <li>Artistic</li>
-          <li>Fashion</li>
-          <li>Nature</li>
-          <li>Creativity</li>
-        </ul>
-      </section>
-    </main>
+    <section class="biography" id="biography">
+      <h3 class="biography__title">Biography</h3>
+      <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" />
+      <h4 class="biography__name">Katya Mills</h4>
+      <!-- <img src="img/rectangle.svg" alt="rectangle"> для создания "черточки" использовать лучше потом псевдоэлементы в стилях -->
+      <p class="biography__role">Art Director
+        Scenography / Styling / Creative Photography / Design</p>
+      <blockquote class="biography__quote">
+        "The more I deal with the work as something that is my own, as
+        something that is personal, the more successful it is."
+      </blockquote>
+    </section>
 
-    <footer>
-      <address>
-        <a href="tel:+79211234567">+7921 123-45-67</a>
-        <a href="mailto:info@modstudio.com">info@modstudio.com</a>
-      </address>
-      <p>A product of MOD</p>
-      <p>© 2023 Mod Media. All rights reserved</p>
-    </footer>
-  </body>
+    <section class="designers" id="designers">
+      <h3 class="designers__title">Designers</h3>
+      <figure class="designers__item">
+        <img src="img/designers-1.jpg" alt="Girl standing in an open field" />
+        <figcaption class="designers__caption">
+          <p class="designers__name">Jess Wonder</p>
+          <p class="designers__details">
+            <span class="designers__skills">From/</span>Be more flower<br>
+            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+          </p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" />
+        <figcaption>
+          <p class="designers__name">Kameron Clein</p>
+          <p class="designers__details">
+            <span class="designers__skills">From/</span>Be more flower<br>
+            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+          </p>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="img/designers-3.jpg" alt="Hands holding glasses,coffee and a notebook" />
+        <figcaption>
+          <p class="designers__name">Loisse Red</p>
+          <p class="designers__details">
+            <span class="designers__skills">From/</span>Be more flower<br>
+            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h3 class="testimonials__title">Testimonials</h3>
+      <p>Website</p>
+      <a href="#">www.whitepapers.com</a>
+      <p>Brand Image</p>
+      <a href="#">www.whitepapers.com</a>
+      <p>Creativity</p>
+      <a href="#">www.whitepapers.com</a><br />
+      <img src="img/testimonials-1.jpg" alt="Modern Cafe Interior" />
+      <img src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" />
+      <blockquote>
+        I just really want to do good work and work with some great people,
+        people who challenge me.
+      </blockquote>
+    </section>
+
+    <section class="strong-points" id="strong-points">
+      <h3 class="strong-points__title">Strong points</h3>
+      <div class="strong-points__images-group">
+        <img class="strong-points__image" src="img/strong-points-1.jpg"
+          alt="Interior with bright modern furniture and a plant">
+        <img class="strong-points__image" src="img/strong-points-2.jpg" alt="Interior with wooden soft chair">
+      </div>
+      <h3 class="strong-points__list-title">Strengths</h3>
+      <ul class="strong-points__list">
+        <li class="strong-points__item">Interiors</li>
+        <li class="strong-points__item">Outdoors</li>
+        <li class="strong-points__item">Styling</li>
+        <li class="strong-points__item">Events</li>
+        <li class="strong-points__item">Architecture</li>
+        <li class="strong-points__item">Design</li>
+        <li class="strong-points__item">Celebrations</li>
+        <li class="strong-points__item">Artistic</li>
+        <li class="strong-points__item">Fashion</li>
+        <li class="strong-points__item">Nature</li>
+        <li class="strong-points__item">Creativity</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <address class="address">
+      <a href="tel:+79211234567" class="phone">+7921 123-45-67</a>
+      <a href="mailto:info@modstudio.com" class="mail">info@modstudio.com</a>
+    </address>
+    <p class="product__info">A product of <span class="product__brand">MOD</span></p>
+    <p class="rights">© 2023 Mod Media. All rights reserved</p>
+  </footer>
+</body>
+
 </html>

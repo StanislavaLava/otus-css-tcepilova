@@ -4,6 +4,50 @@
     src: url('/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
         url('/fonts/Roboto-Regular.woff') format('woff'),
         url('/fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('/fonts/RobotoRoboto-Medium.eot');
+    src: url('/fonts/RobotoRoboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/RobotoRoboto-Medium.woff') format('woff'),
+        url('/fonts/RobotoRoboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('/fonts/Roboto-Bold.eot');
+    src: url('/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Roboto-Bold.woff') format('woff'),
+        url('/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: url('/fonts/Roboto-Black.eot');
+    src: url('/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Roboto-Black.woff') format('woff'),
+        url('/fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display Medium';
+    src: url('/fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display Semibold';
+    src: url('/fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
