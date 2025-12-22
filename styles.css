@@ -27,10 +27,18 @@ a {
     color: inherit;
 }
 
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 86px;
+    font-weight: 500;
+}
+
 h3 {
     font-size: 24px;
     font-weight: 700;
 }
+
+
 
 /* Header  */
 .logo {
@@ -49,11 +57,11 @@ h3 {
 }
 
 /* hero блок  */
-.hero-section__title {
+/* .hero-section__title {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
     font-weight: 500;
-}
+} */
 
 .hero-section__info {
     font-size: 20px;
@@ -65,11 +73,11 @@ h3 {
 transform: rotate(-90.00deg);
 } */
 
-.biography__name {
+/* .biography__name {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
     font-weight: 500;
-}
+} */
 
 .biography__role {
     font-size: 18px;
@@ -103,11 +111,11 @@ transform: rotate(-90.00deg);
     font-size: 32px;
 }
 /* strong-points блок */
-.strong-points__list-title {
+/* .strong-points__list-title {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
     font-weight: 500;
-    }
+    } */
 .strong-points__list {
     font-family: 'Bitter', serif;
     font-size: 34px;
