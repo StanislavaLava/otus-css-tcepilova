@@ -12,24 +12,30 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1 class="logo">Mod</h1>
+<header class="header">
+  <h1 class="logo">Mod</h1>
+  <div class="header__right">
     <nav class="nav">
-      <ul>
+      <ul class="nav__list">
         <li><a href="#biography">Biography</a></li>
         <li><a href="#designers">Designers</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#strong-points">Strong points</a></li>
       </ul>
-      <img class="nav__icon" src="img/Union.svg" alt="Message icon">
     </nav>
+    <button class="header-btn">
+    <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+    </button>
+    </div>
   </header>
 
   <main class="main content">
     <section class="hero-section" id="hero-section">
       <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
+      <div class="hero-section__container">
       <h2 class="hero-section__title">Mod Studio</h2>
       <p class="hero-section__info">Modern Web Studio</p>
+      </div>
     </section>
 
 
@@ -38,8 +44,7 @@
       <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" />
       <h2 class="biography__name">Katya Mills</h2>
       <!-- <img src="img/rectangle.svg" alt="rectangle"> для создания "черточки" использовать лучше потом псевдоэлементы в стилях -->
-      <p class="biography__role">Art Director
-        Scenography / Styling / Creative Photography / Design</p>
+      <p class="biography__role">Art Director Scenography / Styling / Creative Photography / Design</p>
       <blockquote class="biography__quote">
         "The more I deal with the work as something that is my own, as
         something that is personal, the more successful it is."
