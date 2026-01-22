@@ -12,8 +12,8 @@ body {
     font-family:'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    /* width: 100%;
-    max-width: 1440px; */
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     line-height: 1.5;
 }
@@ -122,29 +122,30 @@ h3 {
     font-weight: 500;
 } */
 
-.hero-section {
+.hero {
     background-image: url('img/hero-section-bkg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 630px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 630px;
+    
 }
 
-.hero-section__container {
-    display: flex;
+.hero-wrp {
     background: #ffffff;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
     min-width: 690px;
     min-height: 360px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-section__info {
+.hero__info {
     font-size: 20px;
     font-weight: 500;
 }
