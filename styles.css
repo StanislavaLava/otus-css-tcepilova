@@ -18,6 +18,9 @@ body {
     line-height: 1.5;
 }
 
+
+.container
+
 html {
     scroll-behavior: smooth;
 }
