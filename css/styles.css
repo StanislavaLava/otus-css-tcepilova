@@ -53,6 +53,11 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 
 /* Header  */
 
@@ -147,7 +152,7 @@ h3 {
 
 }
 
-.strong-points, .designers {
+.strong-points {
     display: none;
 }
 
@@ -222,13 +227,54 @@ h3 {
 
 /* designers блок */
 
-.designers__name {
-    font-weight: 700;
-    text-transform: uppercase;
+.designers {
+    padding-left: 20px;
+
 }
+
+.designers__title {
+    padding-bottom: 22px;
+    padding-left: 119px;
+
+}
+
+.designers__item {
+    line-height: 1.18;
+
+
+}
+
 
 .designers__skills {
     font-weight: 700;
+}
+
+
+
+
+
+.designers__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 572px repeat(3, 335px);
+    gap: 20px;
+    overflow-x: auto;
+    justify-self: center;
+    /* padding: 20px*/
+    ;
+    align-items: end;
+    scroll-snap-type: x mandatory;
+    /* Определяет контейнер как область прокрутки с привязкой по оси X */
+    scroll-behavior: smooth;
+    /* Добавляет плавность при прокрутке */
+}
+
+.designers__image {
+    margin-bottom: 21px;
+}
+
+.designers__info {
+    margin-left: 239px;
 }
 
 /* testimonials блок */
