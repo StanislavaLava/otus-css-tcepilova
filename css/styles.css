@@ -71,9 +71,7 @@ h3 {
 
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 86px;
-    font-weight: 600;
+    font-size: clamp(32px, 9vw, 86px);
 }
 
 .header__right {
