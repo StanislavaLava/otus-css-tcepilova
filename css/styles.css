@@ -260,13 +260,13 @@ h4 {
     gap: 20px;
     overflow-x: auto;
     justify-self: center;
-    /* padding: 20px*/
+    max-width: 100%; /* в хроме чтобы не появлялся гор скролл на всей странице */
+    /* padding: 20px*/ 
     ;
     align-items: end;
-    scroll-snap-type: x mandatory;
-    /* Определяет контейнер как область прокрутки с привязкой по оси X */
-    scroll-behavior: smooth;
-    /* Добавляет плавность при прокрутке */
+    scroll-snap-type: x mandatory;/* Определяет контейнер как область прокрутки с привязкой по оси X */
+    scroll-behavior: smooth;/* Добавляет плавность при прокрутке */
+    padding-bottom: 20px; /* Добавляет  отступ му полосой прокрутки и контентом */
 }
 
 .designers__image {
