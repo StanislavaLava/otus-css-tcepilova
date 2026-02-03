@@ -2,6 +2,8 @@
 
 /* Общие стили  */
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -53,6 +55,11 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 
 /* Header  */
 
@@ -61,7 +68,6 @@ h3 {
 }
 
 .header__container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,23 +77,26 @@ h3 {
 
 
 .logo {
-    font-size: clamp(32px, 9vw, 86px);
+    font-size: clamp(32px, 8.03vw - 29.6px, 86px);
+    line-height: 1.1;
+    
 }
 
-.header__right {
+.nav {
     display: flex;
-    align-items: center;
-    gap: 20px;/* ← Вот здесь задаётся расстояние между меню и иконкой */
 }
 
 .nav__list {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.17;
+    margin: 0 20px 0 20px;
     display: flex;
+    justify-content: center;
+    gap: clamp(16px, 4vw, 55px);
     align-items: center;
-    gap: 55px;
     list-style-type: none;
+    white-space: nowrap;
 
 
 }
@@ -118,7 +127,7 @@ h3 {
 
 .hero {
     display: flex;
-    background-image: url("img/hero-section-bkg.jpg");
+    background-image: url('../img/hero-section-bkg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

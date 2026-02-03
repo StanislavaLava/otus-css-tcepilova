@@ -22,29 +22,37 @@
 </head>
 
 <body>
-  <header class="header">
+<header class="header">
+  <div class="container header__container">
     <h1 class="logo">Mod</h1>
-    <div class="header__right">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="#biography">Biography</a></li>
-          <li><a href="#designers">Designers</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#strong-points">Strong points</a></li>
-        </ul>
-      </nav>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#biography" class="nav__link">Biography</a>
+        </li>
+        <li class="nav__item">
+          <a href="#designers" class="nav__link">Designers</a>
+        </li>
+        <li class="nav__item">
+          <a href="#testimonials" class="nav__link">Testimonials</a>
+        </li>
+        <li class="nav__item">
+          <a href="#strong-points" class="nav__link">Strong points</a>
+        </li>
+      </ul>
       <button class="header-btn">
         <img class="nav__icon" src="img/Union.svg" alt="Message icon">
       </button>
-    </div>
-  </header>
+    </nav>
+  </div>
+</header>
 
   <main class="main content">
     <section class="hero">
       <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
-      <div class="hero-wrp">
-        <h2 class="hero__title">Mod Studio</h2>
-        <p class="hero__info">Modern Web Studio</p>
+      <div class="container hero__container">
+        <h2 class="hero-section__title">Mod Studio</h2>
+        <p class="hero-section__info">Modern Web Studio</p>
       </div>
     </section>
 
