@@ -154,7 +154,7 @@ h4 {
 
 }
 
-.testimonials, .strong-points, .designers {
+.strong-points, .designers {
     display: none;
 }
 
@@ -165,8 +165,6 @@ h4 {
 /* biography блок */
 .biography {
     padding: 150px 137px;
-
-
 }
 
 .biography__container {
@@ -241,14 +239,68 @@ h4 {
 }
 
 /* testimonials блок */
-.testimonials p {
+.testimonials {
+    padding: 150px 0 150px;
+}
+
+.testimonials__container {
+    display: grid;
+    grid-template-columns: 11.5% 5.5% 32.5% min-content 29.5% 8.5%;
+    justify-items: center;
+}
+
+.testimonials__site-name {
     font-weight: 700;
 }
 
-.testimonials blockquote {
-    font-family: 'Bitter',serif;
-    font-size: 32px;
+.testimonials__site {
+    writing-mode: sideways-lr;
 }
+
+.testimonials__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.testimonials__left-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials__title {
+    writing-mode: sideways-lr;
+    align-self: flex-start;
+    margin: 2px 73px 0 13px;
+}
+
+
+.testimonials__right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.testimonials__right-img {
+    margin-top: 42px;
+}
+
+
+
+.testimonials__text {
+    max-width: 217px;
+    font-family: "Bitter", serif;
+    font-size: 32px;
+    line-height: 1.18;
+    margin: 0 auto;
+}
+
+
+
+
 /* strong-points блок */
 /* .strong-points__list-title {
     font-family: 'Playfair Display', serif;
@@ -258,7 +310,6 @@ h4 {
 .strong-points__list {
     font-family: 'Bitter', serif;
     font-size: 34px;
-    
 }
 
 footer {
