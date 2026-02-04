@@ -10,10 +10,10 @@
 
 @font-face {
     font-family: 'Roboto Medium';
-    src: url('/fonts/RobotoRoboto-Medium.eot');
-    src: url('/fonts/RobotoRoboto-Medium.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/RobotoRoboto-Medium.woff') format('woff'),
-        url('/fonts/RobotoRoboto-Medium.ttf') format('truetype');
+    src: url('/fonts/Roboto-Medium.eot');
+    src: url('/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Roboto-Medium.woff') format('woff'),
+        url('/fonts/Roboto-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }

@@ -8,28 +8,52 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/fonts.css">
 </head>
 
 <body>
-  <header class="header">
+<header class="header">
+  <div class="container header__container">
     <h1 class="logo">Mod</h1>
     <nav class="nav">
-      <ul>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#designers">Designers</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#strong-points">Strong points</a></li>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#biography" class="nav__link">Biography</a>
+        </li>
+        <li class="nav__item">
+          <a href="#designers" class="nav__link">Designers</a>
+        </li>
+        <li class="nav__item">
+          <a href="#testimonials" class="nav__link">Testimonials</a>
+        </li>
+        <li class="nav__item">
+          <a href="#strong-points" class="nav__link">Strong points</a>
+        </li>
       </ul>
-      <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+      <button class="header-btn">
+        <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+      </button>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main class="main content">
-    <section class="hero-section" id="hero-section">
+    <section class="hero">
       <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
-      <h2 class="hero-section__title">Mod Studio</h2>
-      <p class="hero-section__info">Modern Web Studio</p>
+      <div class="container hero__container">
+        <h2 class="hero-section__title">Mod Studio</h2>
+        <p class="hero-section__info">Modern Web Studio</p>
+      </div>
     </section>
 
 
@@ -38,8 +62,7 @@
       <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" />
       <h2 class="biography__name">Katya Mills</h2>
       <!-- <img src="img/rectangle.svg" alt="rectangle"> для создания "черточки" использовать лучше потом псевдоэлементы в стилях -->
-      <p class="biography__role">Art Director
-        Scenography / Styling / Creative Photography / Design</p>
+      <p class="biography__role">Art Director Scenography / Styling / Creative Photography / Design</p>
       <blockquote class="biography__quote">
         "The more I deal with the work as something that is my own, as
         something that is personal, the more successful it is."
@@ -49,36 +72,36 @@
     <section class="designers" id="designers">
       <h3 class="designers__title">Designers</h3>
       <div class="designers__content-slider">
-      <figure class="designers__item">
-        <img src="img/designers-1.jpg" alt="Girl standing in an open field" />
-        <figcaption class="designers__caption">
-          <h4 class="designers__name">Jess Wonder</h4>
-          <p class="designers__details">
-            <span class="designers__skills">From/</span>Be more flower<br>
-            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
-          </p>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" />
-        <figcaption>
-          <h4 class="designers__name">Kameron Clein</h4>
-          <p class="designers__details">
-            <span class="designers__skills">From/</span>Be more flower<br>
-            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
-          </p>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="img/designers-3.jpg" alt="Hands holding glasses,coffee and a notebook" />
-        <figcaption>
-          <h4 class="designers__name">Loisse Red</h4>
-          <p class="designers__details">
-            <span class="designers__skills">From/</span>Be more flower<br>
-            <span class="designers__skills">Skills/</span>Design Strategy / Marketing
-          </p>
-        </figcaption>
-      </figure>
+        <figure class="designers__item">
+          <img src="img/designers-1.jpg" alt="Girl standing in an open field" />
+          <figcaption class="designers__caption">
+            <h4 class="designers__name">Jess Wonder</h4>
+            <p class="designers__details">
+              <span class="designers__skills">From/</span>Be more flower<br>
+              <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" />
+          <figcaption>
+            <h4 class="designers__name">Kameron Clein</h4>
+            <p class="designers__details">
+              <span class="designers__skills">From/</span>Be more flower<br>
+              <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="img/designers-3.jpg" alt="Hands holding glasses,coffee and a notebook" />
+          <figcaption>
+            <h4 class="designers__name">Loisse Red</h4>
+            <p class="designers__details">
+              <span class="designers__skills">From/</span>Be more flower<br>
+              <span class="designers__skills">Skills/</span>Design Strategy / Marketing
+            </p>
+          </figcaption>
+        </figure>
       </div>
     </section>
 

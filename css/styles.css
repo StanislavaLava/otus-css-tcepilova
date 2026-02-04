@@ -1,17 +1,28 @@
-@import '/fonts.css';
+@import 'fonts.css';
 
 /* Общие стили  */
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    
+}
+
 body {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: normal;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+
 }
 
 html {
@@ -27,6 +38,12 @@ a {
     color: inherit;
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 86px;
+    font-weight: 600;
+}
+
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
@@ -38,36 +55,116 @@ h3 {
     font-weight: 700;
 }
 
+h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 
 /* Header  */
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 86px;
-    font-weight: 600;
+
+.header {
+    height: 135px;
 }
 
-.nav ul {
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 135px
+}
+
+
+.logo {
+    font-size: clamp(32px, 8.03vw - 29.6px, 86px);
+    line-height: 1.1;
+    
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__list {
     font-size: 24px;
     font-weight: 500;
+    line-height: 1.17;
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(16px, 4vw, 55px);
+    align-items: center;
+    list-style-type: none;
+    white-space: nowrap;
+
+
 }
 
-.nav__icon {
+.header-btn {
+    background: transparent;
+    border: none;
     cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    color: transparent;
 }
+
 
 /* hero блок  */
-/* .hero-section__title {
+
+.hero-section__title {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
     font-weight: 500;
-} */
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+
+.hero {
+    display: flex;
+    background-image: url('../img/hero-section-bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    min-height: 630px;
+
+}
+
+.hero__container {
+    display: flex;
+    background: #ffffff;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    min-width: 690px;
+    min-height: 360px;
+}
 
 .hero-section__info {
     font-size: 20px;
     font-weight: 500;
+
 }
+
+.testimonials, .strong-points, .designers {
+    display: none;
+}
+
+
+
+
+
+
 /* biography блок */
+
 
 /* .biography h3 {
 transform: rotate(-90.00deg);
@@ -94,7 +191,6 @@ transform: rotate(-90.00deg);
 .designers__name {
     font-weight: 700;
     text-transform: uppercase;
-    
 }
 
 .designers__skills {
@@ -135,6 +231,7 @@ footer {
 .product__info  {
     font-size: 18px;
 }
+
 .product__info span {
     font-size: 24px;
     font-weight: 900;
