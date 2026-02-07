@@ -160,7 +160,7 @@ h4 {
 /* biography блок */
 
 
-/* biography блок */
+
 .biography {
     padding: 150px 137px;
 }
@@ -229,13 +229,37 @@ h4 {
 
 .designers {
     padding-left: 20px;
-
 }
 
-.designers__title {
-    padding-bottom: 22px;
-    padding-left: 119px;
+.designers__container {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "list";
+    gap: 30px;
+    justify-content: center;
+    /* ← центрирует всю сетку */
+}
 
+
+.designers__title {
+    grid-area: title;
+    text-align: left;
+    padding-left: 118px;
+}
+
+.designers__list {
+    grid-area: list;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 572px repeat(3, 337px);
+    gap: 20px;
+    align-items: end;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-self: center;
+    max-width: 100%;
 }
 
 .designers__item {
@@ -244,29 +268,8 @@ h4 {
 
 }
 
-
 .designers__skills {
     font-weight: 700;
-}
-
-
-
-
-
-.designers__list {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 572px repeat(3, 335px);
-    gap: 20px;
-    overflow-x: auto;
-    justify-self: center;
-    max-width: 100%; /* в хроме чтобы не появлялся гор скролл на всей странице */
-    /* padding: 20px*/ 
-    ;
-    align-items: end;
-    scroll-snap-type: x mandatory;/* Определяет контейнер как область прокрутки с привязкой по оси X */
-    scroll-behavior: smooth;/* Добавляет плавность при прокрутке */
-    padding-bottom: 20px; /* Добавляет  отступ му полосой прокрутки и контентом */
 }
 
 .designers__image {
@@ -277,7 +280,9 @@ h4 {
     margin-left: 239px;
 }
 
+
 /* testimonials блок */
+
 .testimonials {
     padding: 150px 0 150px;
 }
@@ -320,7 +325,6 @@ h4 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
 }
 
 .testimonials__right-img {
@@ -341,6 +345,8 @@ h4 {
 
 
 /* strong-points блок */
+
+
 /* .strong-points__list-title {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
