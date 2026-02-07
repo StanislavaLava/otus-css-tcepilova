@@ -79,7 +79,7 @@ h4 {
 .logo {
     font-size: clamp(32px, 8.03vw - 29.6px, 86px);
     line-height: 1.1;
-    
+
 }
 
 .nav {
@@ -154,7 +154,8 @@ h4 {
 
 }
 
-.strong-points, .designers {
+.strong-points,
+.designers {
     display: none;
 }
 
@@ -162,7 +163,6 @@ h4 {
 /* biography блок */
 
 
-/* biography блок */
 .biography {
     padding: 150px 137px;
 }
@@ -190,7 +190,7 @@ h4 {
 
 
 .biography__info {
-    
+
     width: 39%;
     display: flex;
     flex-direction: column;
@@ -302,6 +302,8 @@ h4 {
 
 
 /* strong-points блок */
+
+
 /* .strong-points__list-title {
     font-family: 'Playfair Display', serif;
     font-size: 86px;
@@ -315,6 +317,7 @@ h4 {
 footer {
     font-weight: 500;
 }
+
 .address a {
     font-style: normal;
     text-transform: uppercase;
@@ -322,7 +325,7 @@ footer {
     cursor: pointer;
 }
 
-.product__info  {
+.product__info {
     font-size: 18px;
 }
 
