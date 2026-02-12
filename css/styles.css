@@ -154,8 +154,7 @@ h4 {
 
 }
 
-.strong-points,
-.designers {
+.strong-points {
     display: none;
 }
 
@@ -229,16 +228,62 @@ h4 {
 
 /* designers блок */
 
-.designers__name {
-    font-weight: 700;
-    text-transform: uppercase;
+.designers {
+    padding-left: 20px;
+}
+
+.designers__container {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "list";
+    gap: 30px;
+    justify-content: center;
+    /* ← центрирует всю сетку */
+}
+
+
+.designers__title {
+    grid-area: title;
+    text-align: left;
+    padding-left: 118px;
+}
+
+.designers__list {
+    grid-area: list;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 572px repeat(3, 337px);
+    gap: 20px;
+    align-items: end;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-self: center;
+    max-width: 100%;
+}
+
+.designers__item {
+    line-height: 1.18;
+
+
 }
 
 .designers__skills {
     font-weight: 700;
 }
 
+.designers__image {
+    margin-bottom: 21px;
+}
+
+.designers__info {
+    margin-left: 239px;
+}
+
+
 /* testimonials блок */
+
 .testimonials {
     padding: 150px 0 150px;
 }
@@ -281,7 +326,6 @@ h4 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
 }
 
 .testimonials__right-img {
