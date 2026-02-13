@@ -154,9 +154,7 @@ h4 {
 
 }
 
-.strong-points {
-    display: none;
-}
+
 
 
 /* biography блок */
@@ -176,7 +174,7 @@ h4 {
 /*  width: 12%;*/
 
 .biography__title {
-    /*transform: rotate(-90deg) translateX(-44%);*/
+   
     writing-mode: sideways-lr;
     align-self: flex-start;
     margin: 0 80px 0 30px
@@ -348,15 +346,69 @@ h4 {
 /* strong-points блок */
 
 
-/* .strong-points__list-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 86px;
-    font-weight: 500;
-    } */
+ 
+.strong-points {
+    padding-left: 20px;
+    padding-bottom: 150px;
+}
+
+.strong-points__container {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "slider-content";
+    gap: 30px;
+    justify-content: center;
+}
+
+.strong-points__title {
+    grid-area: title;
+    text-align: left;
+    padding-left: 118px;
+}
+
+.strong-points__slider-content {
+    display: grid;
+    gap: 21px;
+    grid-template-columns: minmax(335px, 335px) minmax(335px, 335px) minmax(450px, 554px) minmax(335px, 335px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-self: center;
+    max-width: 100%;
+}
+
+.strong-points__info {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+
+}
+
+
+.strong-points__list-title {
+    line-height: 1;
+}
+
 .strong-points__list {
     font-family: 'Bitter', serif;
     font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
+
+.strong-points__item {
+    line-height: 1.2;
+}
+
+
+/*  footer блок */
 
 footer {
     font-weight: 500;
