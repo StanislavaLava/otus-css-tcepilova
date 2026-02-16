@@ -283,7 +283,8 @@ h4 {
 /* testimonials блок */
 
 .testimonials {
-    padding: 150px 0 150px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .testimonials__container {
@@ -345,87 +346,130 @@ h4 {
 
 /* strong-points блок */
 
-
- 
 .strong-points {
-    padding-left: 20px;
-    padding-bottom: 150px;
+    margin-left: 20px;
+    margin-bottom: 151px;
 }
+
 
 .strong-points__container {
-    display: grid;
-    grid-template-areas:
-        "title"
-        "slider-content";
-    gap: 30px;
-    justify-content: center;
-}
-
-.strong-points__title {
-    grid-area: title;
-    text-align: left;
-    padding-left: 118px;
-}
-
-.strong-points__slider-content {
-    display: grid;
-    gap: 21px;
-    grid-template-columns: minmax(335px, 335px) minmax(335px, 335px) minmax(450px, 554px) minmax(335px, 335px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    justify-self: center;
-    max-width: 100%;
-}
-
-.strong-points__info {
-
+    /* Fallback: flex для старых браузеров */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
-
+    gap: 30px;
 }
 
+@supports (display: grid) {
+    .strong-points__container {
+        display: grid;
+        grid-template-areas:
+            "title"
+            "slider-content";
+        justify-content: center;
+    }
+}
+
+
+.strong-points__title {
+    padding-left: 118px;
+}
+
+@supports (display: grid) {
+    .strong-points__title {
+        grid-area: title;
+    }
+}
+
+/* Слайдер: всегда прокручивается */
+.strong-points__slider-content {
+    /* Fallback: flex для прокрутки */
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 21px;
+    max-width: 100%;
+}
+
+/* слайдер в браузерах с поддержкой grid */
+@supports (display: grid) {
+    .strong-points__slider-content {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 21px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        max-width: 100%;
+    }
+}
+
+.strong-points__image {
+
+    width: 335px;
+}
+
+.strong-points__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
+    padding: 0px 9px 18px 9px;
+    width: 450px;
+}
 
 .strong-points__list-title {
     line-height: 1;
+    display: flex;
+    align-items: flex-end;
+
 }
 
 .strong-points__list {
-    font-family: 'Bitter', serif;
-    font-size: 34px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    line-height: 1.2;
     align-items: flex-start;
     justify-content: flex-end;
 }
 
 .strong-points__item {
-    line-height: 1.2;
+    font-family: "Bitter", serif;
+    font-size: 34px;
+    line-height: 1.23;
 }
 
-
 /*  footer блок */
+
+.footer__container {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 20px;
+}
 
 footer {
     font-weight: 500;
 }
 
-.address a {
+.footer__contact-info {
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    line-height: 1.6;
 }
 
-.product__info {
+.footer__product-info {
     font-size: 18px;
 }
 
-.product__info span {
+.footer__product-info strong{
     font-size: 24px;
     font-weight: 900;
 }
