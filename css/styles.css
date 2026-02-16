@@ -1,9 +1,7 @@
 @import 'fonts.css';
 
+
 /* Общие стили  */
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +26,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 
 ul {
     list-style: none;
@@ -60,19 +59,24 @@ h4 {
     text-transform: uppercase;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 /* Header  */
-
 .header {
     height: 135px;
 }
 
 .header__container {
+    /* width: 100%;
+   min-height: 135px;*/
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
-    min-height: 135px
+    justify-content: space-between;
+
 }
 
 
@@ -101,6 +105,17 @@ h4 {
 
 }
 
+.nav__item {
+    text-align: center;
+}
+
+.nav__link-short {
+    display: none;
+}
+
+
+
+
 .header-btn {
     background: transparent;
     border: none;
@@ -115,22 +130,12 @@ h4 {
 
 /* hero блок  */
 
-.hero-section__title {
-    font-family: 'Playfair Display', serif;
-    font-size: 86px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0;
-    text-align: center;
-}
-
-
 .hero {
     display: flex;
     background-image: url('../img/hero-section-bkg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     justify-content: center;
     align-items: center;
     min-height: 630px;
@@ -138,22 +143,27 @@ h4 {
 }
 
 .hero__container {
-    display: flex;
-    background: #ffffff;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    min-width: 690px;
+    width: 47.9%;
+    background-color: #ffffff;
+}
+
+.hero__title {
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+.hero__info {
     min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-section__info {
-    font-size: 20px;
-    font-weight: 500;
-
+.hero-subtitle {
+    line-height: 1;
 }
-
 
 
 
@@ -346,12 +356,14 @@ h4 {
 
 /* strong-points блок */
 
+
+
 .strong-points {
     margin-left: 20px;
-    margin-bottom: 151px;
+    margin-bottom: 150px;
 }
 
-
+/* Контейнер: fallback + grid */
 .strong-points__container {
     /* Fallback: flex для старых браузеров */
     display: flex;
@@ -370,15 +382,10 @@ h4 {
     }
 }
 
-
 .strong-points__title {
+    grid-area: title;
+    text-align: left;
     padding-left: 118px;
-}
-
-@supports (display: grid) {
-    .strong-points__title {
-        grid-area: title;
-    }
 }
 
 /* Слайдер: всегда прокручивается */
@@ -405,40 +412,49 @@ h4 {
     }
 }
 
+/* Все элементы внутри слайдера — фиксированной ширины */
 .strong-points__image {
 
-    width: 335px;
+
+    min-width:  335px;
+
+    height: fit-content;
 }
 
+/* Текстовая карточка — должна быть шире */
 .strong-points__info {
+    min-width: 450px;
+    /* Самая широкая карточка */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
     gap: 28px;
-    padding: 0px 9px 18px 9px;
-    width: 450px;
 }
 
+/* Заголовок списка */
 .strong-points__list-title {
     line-height: 1;
     display: flex;
     align-items: flex-end;
-
 }
 
+/* Список */
 .strong-points__list {
     display: flex;
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
     justify-content: flex-end;
+
+    margin: 0;
+    padding: 0;
 }
 
 .strong-points__item {
-    font-family: "Bitter", serif;
-    font-size: 34px;
     line-height: 1.23;
+    font-family: 'Bitter', serif;
+    font-size: 34px;
+    list-style: none;
 }
 
 /*  footer блок */
@@ -473,3 +489,513 @@ footer {
     font-size: 24px;
     font-weight: 900;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    
+    h2 {
+        font-size: 46px;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+    /* Header */
+    .header {
+        height: 82px;
+
+    }
+
+    .container {
+        padding: 0 16px;
+        max-width: 768px;
+    }
+
+    /* .header__container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+   }*/
+    .logo {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav__list {
+        gap: 70px;
+        margin: 0;
+    }
+
+    .nav__link-long {
+        display: none;
+    }
+
+    .nav__link-short {
+        display: inline-block;
+        width: 12vw;
+        font-family: "Bitter", serif;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .header-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 89px;
+    }
+
+    /* Hero section */
+    .hero {
+        min-height: 685px;
+        background-image: url('../img/hero-section-bkg-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom left;
+        align-items: start;
+        width: 100%;
+
+    }
+
+    .hero__container {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .hero__title {
+        font-size: 70px;
+        line-height: 1.33;
+        /* min-height: 303px;
+     padding-bottom: 20px;*/
+        align-items: center
+    }
+
+    .hero__info {
+        font-size: 18px;
+        line-height: 1.16;
+        min-height: 303px;
+        padding-bottom: 20px;
+    }
+
+    /* Section Biography */
+    .biography {
+        padding: 80px 0;
+    }
+
+    .biography__container {
+        flex-direction: column;
+        position: relative;
+        padding: 0;
+    }
+
+    .biography__title-text {
+        position: absolute;
+        right: 0;
+        writing-mode: horizontal-tb;
+        margin: 0;
+        padding: 0 16px 0 0;
+    }
+
+    .biography__name::before {
+        content: "";
+        display: inline-block;
+        width: 23px;
+        height: 5px;
+        background: #000;
+    }
+
+    .biography__name {
+        position: relative;
+        font-weight: 400;
+        font-size: 64px;
+        margin-bottom: 35px;
+        margin-left: 10px;
+        white-space: nowrap;
+        order: 3;
+
+    }
+
+    .biography__name br {
+        display: none;
+    }
+
+
+    .biography__image {
+        max-height: 400px;
+        width: 100%;
+        order: 3;
+    }
+
+
+    .biography__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 14px;
+        order: 2;
+    }
+
+    .biography__skill-list {
+        list-style-type: "- ";
+        flex-direction: column;
+    }
+
+    .biography__list-item:first-child {
+        list-style-type: "- ";
+    }
+
+    .biography__info-skills {
+        margin: 0 0 57px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.17;
+    }
+
+    .biography__role {
+        margin: 0;
+    }
+
+    .biography__quote::before {
+        display: none;
+    }
+
+    .biography__quote {
+        width: 100%;
+        font-size: 30px;
+        /* Уменьшаем размер шрифта */
+        font-weight: 300;
+        line-height: 36px;
+        margin-bottom: 124px;
+    }
+
+    .biography__quote p br {
+        display: inline;
+    }
+
+    /*.designers__container */
+
+    .designers__title {
+        padding-left: 0;
+    }
+
+
+    .designers__list {
+
+        grid-template-columns: repeat(4, 310px);
+        gap: 20px;
+        /*padding-bottom: 20px;*/
+        align-items: end;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* Определяет контейнер как область прокрутки с привязкой по оси X */
+        scroll-behavior: smooth;
+        /* Добавляет плавность при прокрутке */
+        justify-self: center;
+        /* ← центрирует сам слайдер */
+        max-width: 100%;
+    }
+
+
+
+    .designers__image {
+        width: 310px;
+        height: 439px;
+        object-fit: cover;
+    }
+
+    .designers__info {
+        margin-left: 0;
+    }
+
+
+
+    /* .designers__image-big-size {
+    width:310px;
+    height: 440px;
+    object-fit: cover;
+  }*/
+ /* testimonials блок */
+ .testimonials {
+     margin: 80px 0;
+
+ }
+
+ /* .testimonials__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 28px;
+
+}
+
+  .testimonials__left-img {
+    display: none;
+  }
+  .testimonials__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:22px;
+    order:3;
+    padding: 0;
+    margin-right:0;
+
+  }
+
+  .testimonials__site{
+    writing-mode:horizontal-tb;
+  }
+  .testimonials__title {
+    writing-mode: horizontal-tb;
+    order: 1;
+    text-align: right;
+    margin: 0;
+    width: 100%;
+  }
+
+  .testimonials__right-content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    order: 2;
+  }
+  .testimonials__quote {
+    margin-top: 28px;
+    max-width: 364px;
+
+  }
+
+  .testimonials__text {
+    max-width: 357px;
+    font-size: 30px;
+    font-weight: 300;
+    justify-self: flex-start;
+  }
+  .testimonials__right-img {
+    width: 336px;
+    height: 330px;
+    object-fit: cover;
+    margin-top: 0;
+  }
+*/
+
+
+
+ .testimonials__container {
+     grid-template-columns: 1fr;
+     gap: 26px;
+
+ }
+
+ .testimonials__space-desktop {
+     display: none;
+ }
+
+
+
+ .testimonials__text-tablet {
+     display: block;
+ }
+
+ .testimonials__title {
+     writing-mode: horizontal-tb;
+     margin: 0;
+     width: 100%;
+
+ }
+
+ .testimonials__left-img {
+     display: none;
+ }
+
+ .testimonials__right-content {
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: space-between;
+     width: 100%;
+ }
+
+ .testimonials__quote {
+     margin-top: 28px;
+ }
+
+ .testimonials__text {
+     max-width: 100%;
+     font-size: 30px;
+     font-weight: 300;
+
+     justify-self: flex-start;
+ }
+
+ picture {
+     height: 100%;
+ }
+
+ .testimonials__right-img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     margin-top: 0;
+ }
+
+ .testimonials__list {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     order: 3;
+     padding: 0;
+     margin-right: 0;
+     width: 100%;
+ }
+
+ .testimonials__site {
+     flex: 1;
+     writing-mode: horizontal-tb;
+ }
+
+
+
+ /* .testimonials__site-link{
+    display: inline-block;
+    margin-top: 6px;
+  }*/
+
+
+
+
+ /* strong-points блок */
+ 
+    .strong-points {
+        margin-left: 15px;
+        /* Уменьшаем боковой отступ */
+        margin-bottom: 60px;
+        /* Уменьшаем огромный нижний отступ до разумного */
+    }
+
+    .strong-points__title h2 {
+    font-size: 46px;
+        margin-bottom: 24px
+    }
+
+    .strong-points__container {
+        gap: 30px;
+    }
+
+    .strong-points__slider-content {
+        gap: 15px;
+        padding-bottom: 15px;
+        /* Место для полосы прокрутки, если она появится */
+    }
+
+    .strong-points__image {
+        width: 310px;
+        /* Немного уменьшаем ширину картинок для компактности */
+    }
+
+    .strong-points__info {
+        width: 201px;
+        /* Сужаем блок с текстом, чтобы он не вылезал за границы на планшетах */
+        gap: 20px;
+        padding: 0 10px 15px 10px;
+    }
+
+    .strong-points__item {
+        font-size: 24px;
+        /* Уменьшаем шрифт, так как 34px слишком велик для 768px */
+        line-height: 1.2;
+
+    }
+        strong-points__list-title {
+        font-size: 18px;
+
+
+        }
+
+
+}
+
+
+
+ @media screen and (max-width:450px) {
+
+     /* Header */
+     .nav__list {
+         gap: 0;
+         width: 100%;
+         justify-content: space-around;
+     }
+
+     /* Section Biography */
+
+     .biography__title-text {
+         padding: 0 25px 0 0;
+     }
+
+     .biography__info {
+         padding-left: 18px;
+     }
+
+     .biography__quote {
+         margin-bottom: 30px;
+     }
+
+     /* Section Testimonials */
+
+     .nav__icon {
+         display: block;
+     }
+
+     picture {
+         width: 100%;
+         height: 330px;
+     }
+
+     .testimonials__right-content {
+         height: auto;
+         flex-direction: column;
+         gap: 18px;
+     }
+
+     .testimonials__text-tablet:nth-child(1) {
+         display: none;
+     }
+
+     .testimonials__right-img {
+         width: 100%;
+     }
+
+     .testimonials__quote {
+         width: 100%;
+         margin: 0;
+     }
+
+     .testimonials__text {
+         max-width: 342px;
+         justify-self: center;
+     }
+
+     .designers__slider {
+         justify-self: auto;
+     }
+
+     /* Section Strong points */
+
+     .strong-points__container {
+         padding: 0 0 0 16px;
+     }
+ }
+
