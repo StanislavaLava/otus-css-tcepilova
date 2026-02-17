@@ -163,6 +163,8 @@ img {
 
 .hero-subtitle {
     line-height: 1;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 
@@ -412,19 +414,16 @@ img {
     }
 }
 
-/* Все элементы внутри слайдера — фиксированной ширины */
+
 .strong-points__image {
-
-
     min-width:  335px;
 
     height: fit-content;
 }
 
-/* Текстовая карточка — должна быть шире */
+/* Текстовая карточка — самая широкая */
 .strong-points__info {
     min-width: 450px;
-    /* Самая широкая карточка */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -610,7 +609,7 @@ footer {
 
     .biography__name::before {
         content: "";
-        display: inline-block;
+        position: absolute;
         width: 23px;
         height: 5px;
         background: #000;
@@ -699,9 +698,7 @@ footer {
         align-items: end;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        /* Определяет контейнер как область прокрутки с привязкой по оси X */
         scroll-behavior: smooth;
-        /* Добавляет плавность при прокрутке */
         justify-self: center;
         /* ← центрирует сам слайдер */
         max-width: 100%;
@@ -811,10 +808,13 @@ footer {
      display: block;
  }
 
- .testimonials__title {
-     writing-mode: horizontal-tb;
-     margin: 0;
-     width: 100%;
+ 
+.testimonials__title {
+        writing-mode: horizontal-tb;
+        order: 1;
+        text-align: right;
+        margin: 0;
+        width: 100%;
 
  }
 
