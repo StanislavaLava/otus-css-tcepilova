@@ -29,26 +29,26 @@
       <h1 class="logo">Mod</h1>
       <nav class="nav">
         <ul class="nav__list">
-      <li class="nav__item">
-        <a href="#biography" class="nav__link">
-          <span class="nav__link-short">B</span><span class="nav__link-long">Biography</span>
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#designers" class="nav__link">
-          <span class="nav__link-short">D</span><span class="nav__link-long">Designers</span>
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#testimonials" class="nav__link">
-          <span class="nav__link-short">T</span><span class="nav__link-long">Testimonials</span>
-        </a>
-      </li>
-      <li class="nav__item">
-        <a href="#strong-points" class="nav__link">
-          <span class="nav__link-short">S</span><span class="nav__link-long">Strong points</span>
-        </a>
-      </li>
+          <li class="nav__item">
+            <a href="#biography" class="nav__link">
+              <span class="nav__link-short">B</span><span class="nav__link-long">Biography</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#designers" class="nav__link">
+              <span class="nav__link-short">D</span><span class="nav__link-long">Designers</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#testimonials" class="nav__link">
+              <span class="nav__link-short">T</span><span class="nav__link-long">Testimonials</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#strong-points" class="nav__link">
+              <span class="nav__link-short">S</span><span class="nav__link-long">Strong points</span>
+            </a>
+          </li>
         </ul>
         <button class="header-btn">
           <img class="nav__icon" src="img/Union.svg" alt="Message icon">
@@ -57,15 +57,15 @@
     </div>
   </header>
 
-<main class="main content">
-  <section class="hero">
-    <div class="container hero__container">
-      <div class="hero__info">
-        <h2 class="hero__title">Mod Studio</h2>
-        <p class="hero__subtitle">Modern Web Studio</p>
+  <main class="main content">
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__info">
+          <h2 class="hero__title">Mod Studio</h2>
+          <p class="hero__subtitle">Modern Web Studio</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <section class="biography" id="biography">
       <div class="container biography__container">
@@ -74,9 +74,7 @@
           <h3 class="biography__title-text">Biography</h3>
         </div>
         <div class="biography__info">
-          <h2 class="biography__name">
-            Katya <br>Mills
-          </h2>
+          <h2 class="biography__name">Katya<br> Mills</h2>
           <div class="biography__info-skills">
             <p class="biography__role">Art Director</p>
             <ul class="biography__skill-list">
@@ -87,10 +85,10 @@
             </ul>
           </div>
           <!--<br>Scenography / Styling / Creative Photography / Design-->
-          <blockquote class="biography__quote">
-            <p>The more I deal with<br> the work as something that is my own,<br> as something that<br> is personal, the more
-              successful it is.</p>
-          </blockquote>
+        <blockquote class="biography__quote">
+          <p>"The more I deal with<br> the work as something that is my own,<br> as something that<br> is personal, the more
+            successful it is."</p>
+        </blockquote>
         </div>
       </div>
     </section>
@@ -139,8 +137,7 @@
 
     <section class="testimonials" id="testimonials">
       <div class="container testimonials__container">
-        <div>
-        </div>
+        <div class="testimonials__space-desktop"></div>
         <ul class="testimonials__list">
           <li class="testimonials__site">
             <p class="testimonials__site-name">Website</p>
@@ -155,58 +152,70 @@
             <a href="#" class="testimonials__site-link">www.whitepapers.com</a>
           </li>
         </ul>
-        <img src="img/testimonials-1.jpg" alt="Modern Cafe Interior" class="testimonials__left-img" />
+        <img class="testimonials__big-img" src="img/testimonials-1.jpg" alt="Modern Cafe Interior" />
         <h3 class="testimonials__title">Testimonials</h3>
-        <div class="testimonials__right-content">
+        <div class="testimonials__content">
           <blockquote class="testimonials__quote">
-            <p class="testimonials__text">I just really want to do good work and work with some great people, people who
-              challenge me.</p>
+            <p class="testimonials__text">I just really want<br class="testimonials__text-tablet">
+              to do good work and work <br class="testimonials__text-tablet">
+              with some great people,<br class="testimonials__text-tablet">
+              people who challenge<br class="testimonials__text-tablet"> me.</p>
           </blockquote>
-          <img src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" class="testimonials__right-img" />
+          <picture>
+            <source srcset="img/testimonials-2-medium.jpg" media="(max-width: 768px)" />
+            <img src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" class="testimonials__img" />
+          </picture>
         </div>
-        <div>
-        </div>
+        <div class="testimonials__space-desktop"></div>
       </div>
     </section>
 
     <section class="strong-points" id="strong-points">
-      <div class="strong-points__container">
+      <div class="container strong-points__container">
         <h3 class="strong-points__title">Strong points</h3>
-        <div class="strong-points__slider-content">
-          <img class="strong-points__image" src="img/strong-points-1.jpg"
-            alt="Interior with bright modern furniture and a plant">
-          <img class="strong-points__image" src="img/strong-points-2.jpg" alt="Interior with wooden soft chair">
-          <div class="strong-points__info">
+        <ul class="strong-points__slider">
+          <li class="strong-points__slider-item">
+            <img class="strong-points__image" src="img/strong-points-1.jpg"
+              alt="Interior with bright modern furniture and a plant">
+          </li>
+          <li class="strong-points__slider-item ">
+            <img class="strong-points__image" src="img/strong-points-2.jpg" alt="Interior with wooden soft chair">
+          </li>
+          <li class="strong-points__slider-item strong-points__slider-text">
             <h2 class="strong-points__list-title">Strengths</h2>
-            <ul class="strong-points__list">
-              <li class="strong-points__item">Interiors</li>
-              <li class="strong-points__item">Outdoors</li>
-              <li class="strong-points__item">Portraits</li>
-              <li class="strong-points__item">Styling</li>
-              <li class="strong-points__item">Events</li>
-              <li class="strong-points__item">Architecture</li>
-              <li class="strong-points__item">Design</li>
-              <li class="strong-points__item">Celebrations</li>
-              <li class="strong-points__item">Fashion</li>
-              <li class="strong-points__item">Nature</li>
+            <ul class="strong-points__strengths-list">
+              <li class="strong-points__strengths-item">Interiors</li>
+              <li class="strong-points__strengths-item">Outdoors</li>
+              <li class="strong-points__strengths-item">Portraits</li>
+              <li class="strong-points__strengths-item">Styling</li>
+              <li class="strong-points__strengths-item">Events</li>
+              <li class="strong-points__strengths-item">Architecture</li>
+              <li class="strong-points__strengths-item">Design</li>
+              <li class="strong-points__strengths-item">Celebrations</li>
+              <li class="strong-points__strengths-item">Fashion</li>
+              <li class="strong-points__strengths-item">Nature</li>
             </ul>
-          </div>
-          <img class="strong-points__image" src="img/strong-points-3.jpg" alt="Modern Cafe Interior">
-        </div>
+          </li>
+          <li class="strong-points__slider-item">
+            <img class="strong-points__image" src="img/strong-points-3.jpg" alt="Modern Cafe Interior">
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="container footer__container">
-    <address class="footer__contact-info">
-      <p><a class="footer__phone" href="tel:+79211234567">+7 921 123-45-67</a></p>
-      <p><a class="footer__mail" href="mailto:info@modstudio.com">info@modstudio.com</a></p>
-    </address>
-    <div>
-      <p class="footer__product-info">A product of <strong>MOD</strong></p>
-    </div>
-    <div>
-      <p class="footer__copyrights">© 2023 Mod Media. All rights reserved</p>
+  <footer class="footer">
+    <div class="container footer__container">
+      <address class="footer__contact-info">
+        <p><a class="footer__phone" href="tel:+79211234567">+7 921 123-45-67</a></p>
+        <p><a class="footer__mail" href="mailto:info@modstudio.com">info@modstudio.com</a></p>
+      </address>
+      <div>
+        <p class="footer__product-info">A product of <strong>MOD</strong></p>
+      </div>
+      <div>
+        <p class="footer__copyrights">© 2023 Mod Media. All rights reserved</p>
+      </div>
     </div>
   </footer>
 </body>
