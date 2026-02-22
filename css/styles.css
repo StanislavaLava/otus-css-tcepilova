@@ -289,7 +289,7 @@ h4 {
 
 .testimonials__container {
     display: grid;
-    grid-template-columns: 11.5% 5.5% 32.5% min-content 29.5% 8.5%;
+    grid-template-columns: 11% 6% 32% min-content 30% 9%;
     justify-items: center;
 }
 
@@ -307,7 +307,7 @@ h4 {
     justify-content: space-around
 }
 
-.testimonials__left-img {
+.testimonials__big-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -316,18 +316,18 @@ h4 {
 .testimonials__title {
     writing-mode: sideways-lr;
     align-self: flex-start;
-    margin: 2px 73px 0 13px;
+    margin: 0px 68px 0 25px
 }
 
 
-.testimonials__right-content {
+.testimonials__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
-.testimonials__right-img {
+.testimonials__img {
     margin-top: 42px;
 }
 
@@ -352,12 +352,18 @@ h4 {
 }
 
 
-.strong-points__container {
+
     /* Fallback: flex для старых браузеров */
+.strong-points__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 30px;
+    max-width: 1560px;/* Чтобы контент внутри слайдера влез весь на широких экранах */
+    padding: 0;
+}
+
+.strong-points__title {
+    padding-left: 118px;
 }
 
 @supports (display: grid) {
@@ -365,44 +371,38 @@ h4 {
         display: grid;
         grid-template-areas:
             "title"
-            "slider-content";
+            "slider";
         justify-content: center;
     }
-}
 
-
-.strong-points__title {
-    padding-left: 118px;
-}
-
-@supports (display: grid) {
     .strong-points__title {
         grid-area: title;
+        text-align: left;
+        padding-left: 118px;
     }
+
 }
 
-/* Слайдер: всегда прокручивается */
-.strong-points__slider-content {
-    /* Fallback: flex для прокрутки */
+.strong-points__slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     gap: 21px;
     max-width: 100%;
 }
 
-/* слайдер в браузерах с поддержкой grid */
-@supports (display: grid) {
-    .strong-points__slider-content {
+@supports  (display: grid) {
+    .strong-points__slider {
+        grid-area: slider;
         display: grid;
-        grid-auto-flow: column;
         gap: 21px;
+        grid-template-columns: minmax(335px, 335px) minmax(335px, 335px) minmax(450px, 554px) minmax(335px, 335px);
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
+        justify-self: center;
         max-width: 100%;
     }
+
 }
 
 .strong-points__image {
@@ -410,7 +410,12 @@ h4 {
     width: 335px;
 }
 
-.strong-points__info {
+.strong-points__slider-item {
+    flex: 0 0 auto;
+}
+
+
+.strong-points__slider-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -420,14 +425,14 @@ h4 {
     width: 450px;
 }
 
-.strong-points__list-title {
+.strong-points__strengths-list-title {
     line-height: 1;
     display: flex;
     align-items: flex-end;
 
 }
 
-.strong-points__list {
+.strong-points__strengths-list {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -435,33 +440,30 @@ h4 {
     justify-content: flex-end;
 }
 
-.strong-points__item {
+.strong-points__strengths-item {
     font-family: "Bitter", serif;
     font-size: 34px;
     line-height: 1.23;
 }
 
 /*  footer блок */
-
 .footer__container {
-    background-color: black;
-    color: white;
+    color: #ffffff;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 70px 20px;
 }
 
-footer {
-    font-weight: 500;
+.footer {
+    background-color: #000000;
 }
 
 .footer__contact-info {
-    font-style: normal;
+font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
-    cursor: pointer;
+
     line-height: 1.6;
 }
 
@@ -469,7 +471,7 @@ footer {
     font-size: 18px;
 }
 
-.footer__product-info strong{
+.footer__product-info strong {
     font-size: 24px;
     font-weight: 900;
 }
