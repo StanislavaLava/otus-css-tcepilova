@@ -396,7 +396,7 @@ h4 {
         grid-area: slider;
         display: grid;
         gap: 21px;
-        grid-template-columns: minmax(335px, 335px) minmax(335px, 335px) minmax(450px, 554px) minmax(335px, 335px);
+        grid-template-columns: 335px 335px 450px 335px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         justify-self: center;
@@ -433,11 +433,8 @@ h4 {
 }
 
 .strong-points__strengths-list {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    justify-content: flex-end;
+    padding-right: 16px;
+    padding-bottom: 3px;
 }
 
 .strong-points__strengths-item {
