@@ -101,8 +101,6 @@ img {
     align-items: center;
     list-style-type: none;
     white-space: nowrap;
-
-
 }
 
 .nav__item {
@@ -112,9 +110,6 @@ img {
 .nav__link-short {
     display: none;
 }
-
-
-
 
 .header-btn {
     background: transparent;
@@ -169,9 +164,7 @@ img {
 }
 
 
-
 /* biography блок */
-
 
 .biography {
     padding: 150px 137px;
@@ -201,13 +194,11 @@ img {
 
 .biography__info {
     width: 39%;
-display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 36px;
-    padding-top: 60px;
-    
 }
 
 .biography__name {
@@ -225,8 +216,7 @@ display: flex;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.17;
-    /* padding-top: 36px; */
-    /* margin: 42px */
+   
     }
 
 .biography__skill-list {
@@ -234,8 +224,6 @@ display: flex;
     list-style-position: inside;
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
 .biography__list-item:first-child {
@@ -255,9 +243,11 @@ display: flex;
     position: relative;
     font-family: 'Bitter', serif;
     font-size: 26px;
-    max-width: 398px;
+    max-width: 377px;
     line-height: 1.19;
-     
+}
+.biography__quote-tablet {
+    display:none;
 }
 
 /* designers блок */
@@ -377,17 +367,12 @@ display: flex;
 }
 
 
-
-/* strong-points блок */
-
-
 /* strong-points блок */
 
 .strong-points {
     margin-left: 20px;
     margin-bottom: 151px;
 }
-
 
 
 /* Fallback: flex для старых браузеров */
@@ -532,12 +517,7 @@ display: flex;
         max-width: 768px;
     }
 
-    /* .header__container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     height: 100%;
-   }*/
+   
     .logo {
         display: none;
     }
@@ -616,10 +596,13 @@ display: flex;
         padding: 0;
     }
 
+        .biography__title {
+            writing-mode: horizontal-tb;
+        }
+
     .biography__title-text {
         position: absolute;
         right: 0;
-        writing-mode: horizontal-tb;
         margin: 0;
         padding: 0 16px 0 0;
     }
@@ -684,15 +667,15 @@ display: flex;
     }
 
     .biography__quote {
-        width: 100%;
+        max-width: 100%;
         font-size: 30px;
         font-weight: 300;
         line-height: 1.2;
-        margin-bottom: 15px;
+        margin-bottom: 85px;
     }
 
-    .biography__quote p br {
-        display: inline;
+    .biography__quote-tablet {
+        display: block;
     }
 
     /*.designers__container */
@@ -717,7 +700,6 @@ display: flex;
     }
 
 
-
     .designers__image {
         width: 310px;
         height: 439px;
@@ -727,9 +709,6 @@ display: flex;
     .designers__info {
         margin-left: 0;
     }
-
-
-
     /* .designers__image-big-size {
     width:310px;
     height: 440px;
@@ -737,8 +716,8 @@ display: flex;
 }*/
 
 
-
  /* testimonials блок */
+
 .testimonials {
     margin: 80px 0;
 }
@@ -824,16 +803,6 @@ display: flex;
     writing-mode: horizontal-tb;
 }
 
-
-
- /* .testimonials__site-link{
-    display: inline-block;
-    margin-top: 6px;
-  }*/
-
-
-
-
  /* strong-points блок */
 
 .strong-points {
@@ -852,8 +821,7 @@ display: flex;
 .strong-points__slider{
     display: grid;
     grid-template-columns: 201px 310px 310px 310px;
-    
-  }
+}
 
 }
 
@@ -868,8 +836,6 @@ padding: 0;
 width: 201px;
 height: 450px;
 }
-
-
 
 
 .strong-points__strengths-list{
@@ -892,10 +858,10 @@ height: 450px;
 .footer__container {
     color: #ffffff;
     flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 30px 16px 30px 16px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 30px 16px 30px 16px;
 }
 
 .footer {
@@ -927,78 +893,75 @@ height: 450px;
     align-self: flex-start;
 }
 
-
-/* вставка */
 }
 
 
- @media screen and (max-width:566px) {
+@media screen and (max-width:566px) {
 
      /* Header */
-     .nav__list {
-         gap: 0;
-         width: 100%;
-         justify-content: space-around;
-     }
+.nav__list {
+    gap: 0;
+    width: 100%;
+    justify-content: space-around;
+}
 
      /* Section Biography */
 
-     .biography__title-text {
-         padding: 0 25px 0 0;
-     }
+.biography__title-text {
+    padding: 0 25px 0 0;
+}
 
-     .biography__info {
-         padding-left: 18px;
-     }
+.biography__info {
+    padding-left: 18px;
+}
 
-     .biography__quote {
-         margin-bottom: 30px;
-     }
+.biography__quote {
+    margin-bottom: 30px;
+}
 
      /* Section Testimonials */
 
-     .nav__icon {
-         display: block;
-     }
+.nav__icon {
+display: block;
+}
 
-     picture {
-         width: 100%;
-         height: 330px;
-     }
+.picture {
+    width: 100%;
+    height: 330px;
+}
 
-     .testimonials__content {
+.testimonials__content {
     height: auto;
     flex-direction: column;
     align-items: center;
     gap: 18px;
-     }
+}
 
-     .testimonials__text-tablet:nth-child(1) {
-         display: none;
-     }
+.testimonials__text-tablet:nth-child(1) {
+    display: none;
+}
 
-     .testimonials__img {
-         width: 100%;
-     }
+.testimonials__img {
+    width: 100%;
+}
 
-     .testimonials__quote {
-         width: 100%;
-         margin: 0;
-     }
+.testimonials__quote {
+    width: 100%;
+    margin: 0;
+}
 
-     .testimonials__text {
-         max-width: 342px;
-         justify-self: center;
-     }
+.testimonials__text {
+    max-width: 342px;
+    justify-self: center;
+}
 
-     .designers__slider {
-         justify-self: auto;
-     }
+.designers__slider {
+    justify-self: auto;
+}
 
      /* Section Strong points */
-
-     .strong-points__container {
-         padding: 0 0 0 16px;
-     }
- }
+.strong-points__container {
+    padding: 0 0 0 16px;
+}
+}
 
