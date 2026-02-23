@@ -206,12 +206,13 @@ display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 36px;
-    padding: 18px 0px 18px 0px;
+    padding-top: 60px;
     
 }
 
 .biography__name {
     line-height: 1.33;
+    
 }
 
 .biography__info-skills{
@@ -322,7 +323,7 @@ display: flex;
 
 .testimonials__container {
     display: grid;
-    grid-template-columns: 11.5% 5.5% 32.5% min-content 29.5% 8.5%;
+    grid-template-columns: 11% 6% 32% min-content 30% 9%;
     justify-items: center;
 }
 
@@ -330,11 +331,11 @@ display: flex;
     font-weight: 700;
 }
 
-.testimonials__site {
+.testimonials__site-item {
     writing-mode: sideways-lr;
 }
 
-.testimonials__list {
+.testimonials__site-list{
     display: flex;
     flex-direction: column;
     justify-content: space-around
@@ -349,7 +350,7 @@ display: flex;
 .testimonials__title {
     writing-mode: sideways-lr;
     align-self: flex-start;
-    margin: 2px 73px 0 13px;
+    margin: 0px 68px 0 25px
 }
 
 .testimonials__content {
@@ -371,42 +372,47 @@ display: flex;
     margin: 0 auto;
 }
 
+.testimonials__text-tablet {
+    display: none;
+}
 
 
 
 /* strong-points блок */
 
 
+/* strong-points блок */
 
 .strong-points {
     margin-left: 20px;
-    margin-bottom: 150px;
-
+    margin-bottom: 151px;
 }
 
+
+
+/* Fallback: flex для старых браузеров */
 .strong-points__container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 1560px; /* Чтобы контент внутри слайдера влез весь на широких экранах */
-    padding:0;
-    
+    max-width: 1560px;
+    /* Чтобы контент внутри слайдера влез весь на широких экранах */
+    padding: 0;
 }
 
 .strong-points__title {
     padding-left: 118px;
 }
 
-
-@supports (display: grid) {
+@supports not (display: grid) {
     .strong-points__container {
-         display: grid;
-         grid-template-areas:
-         "title"
-         "slider";
-         justify-content: center;
-        }
-        
+        display: grid;
+        grid-template-areas:
+            "title"
+            "slider";
+        justify-content: center;
+    }
+
     .strong-points__title {
         grid-area: title;
         text-align: left;
@@ -423,142 +429,53 @@ display: flex;
     max-width: 100%;
 }
 
-
-@supports (display: grid){
+@supports not (display: grid) {
     .strong-points__slider {
         grid-area: slider;
-         display: grid;
-         gap: 21px;
-         grid-template-columns: minmax(335px, 335px) minmax(335px, 335px) minmax(450px, 554px) minmax(335px, 335px);
-         overflow-x: auto;
-         scroll-snap-type: x mandatory;
-         justify-self: center;
-         max-width: 100%;
-        }
+        display: grid;
+        gap: 21px;
+        grid-template-columns: 335px 335px 450px 335px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-self: center;
+        max-width: 100%;
+    }
 
+}
+
+.strong-points__image {
+
+    width: 335px;
 }
 
 .strong-points__slider-item {
     flex: 0 0 auto;
 }
 
+
 .strong-points__slider-text {
-    padding: 0 38px 18px 38px;
     display: flex;
     flex-direction: column;
+    gap: 28px;
     align-items: center;
+    width: 450px;
 }
 
-.strong-points__list-title {
-    margin-bottom: 28px;
+.strong-points__strengths-list-title {
     line-height: 1;
+    
+
+}
+
+.strong-points__strengths-list {
+    
 }
 
 .strong-points__strengths-item {
     font-family: "Bitter", serif;
     font-size: 34px;
-    line-height: 1.2;
-
-    
-}
-
-.strong-points__strengths-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
- 
-/* .strong-points__container {
-     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-@supports (display: grid) {
-    .strong-points__container {
-        display: grid;
-        grid-template-areas:
-            "title"
-            "slider-content";
-        justify-content: center;
-    }
-}
-
-.strong-points__title {
-    grid-area: title;
-    text-align: left;
-    padding-left: 118px;
-}
-
- 
-.strong-points__slider-content {
-   
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 21px;
-    max-width: 100%;
-}
-
- 
-@supports (display: grid) {
-    .strong-points__slider-content {
-        display: grid;
-        grid-auto-flow: column;
-        gap: 21px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        max-width: 100%;
-    }
-}
-
-
-.strong-points__image {
-    min-width:  335px;
-
-    height: fit-content;
-}
-
- 
-.strong-points__info {
-    min-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-}
-
- 
-.strong-points__list-title {
-    line-height: 1;
-    display: flex;
-    align-items: flex-end;
-}
-
- 
-.strong-points__list {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    justify-content: flex-end;
-
-    margin: 0;
-    padding: 0;
-}
-
-.strong-points__item {
     line-height: 1.23;
-    font-family: 'Bitter', serif;
-    font-size: 34px;
-    list-style: none;
-} */
+}
 
 /*  footer блок */
 .footer__container {
@@ -574,7 +491,7 @@ display: flex;
 }
 
 .footer__contact-info {
-font-style: normal;
+    font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -707,12 +624,9 @@ font-style: normal;
         padding: 0 16px 0 0;
     }
 
-    .biography__name::before {
-        content: "";
-        position: absolute;
-        width: 23px;
-        height: 5px;
-        background: #000;
+    .biography__name:before {
+        content: "-";
+        
     }
 
     .biography__name {
@@ -720,7 +634,6 @@ font-style: normal;
         font-weight: 400;
         font-size: 64px;
         margin-bottom: 35px;
-        margin-left: 10px;
         white-space: nowrap;
         order: 3;
 
@@ -775,7 +688,7 @@ font-style: normal;
         font-size: 30px;
         font-weight: 300;
         line-height: 1.2;
-        margin-bottom: 50px;
+        margin-bottom: 15px;
     }
 
     .biography__quote p br {
@@ -843,41 +756,34 @@ font-style: normal;
 }
 
 
-
-
-
 .testimonials__container {
     grid-template-columns: 1fr;
     gap: 26px;
-
 }
 
 .testimonials__space-desktop {
     display: none;
 }
 
-
-
 .testimonials__text-tablet {
     display: block;
- }
+}
 
- 
+
 .testimonials__title {
-        writing-mode: horizontal-tb;
-        text-align: right;
-        margin: 0;
-        width: 100%;
+    writing-mode: horizontal-tb;
+    text-align: right;
+    margin: 0;
+    width: 100%;
+}
 
- }
 
-
- .testimonials__content {
+.testimonials__content {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    }
+}
 
 .testimonials__quote {
     margin-top: 28px;
@@ -905,15 +811,18 @@ font-style: normal;
     margin-top: 0;
 }
 
-.testimonials__list {
-    justify-content: space-between;
-        flex-wrap: wrap;
- }
+.testimonials__site-list { 
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 34px;
+    order: 3;
+}
 
- .testimonials__site {
-     flex: 1;
-     writing-mode: horizontal-tb;
- }
+.testimonials__site-item {
+    flex: 1;
+    writing-mode: horizontal-tb;
+}
 
 
 
@@ -926,55 +835,101 @@ font-style: normal;
 
 
  /* strong-points блок */
- 
+
 .strong-points {
     margin-bottom: 80px;
-  }
+    margin-left: 0;
+}
 
 
 .strong-points__title {
 
     padding-left: 0;
-  }
+}
 
+
+@supports not (display: grid) {
 .strong-points__slider{
     display: grid;
     grid-template-columns: 201px 310px 310px 310px;
-    grid-template-areas:
-    "col-3 col-1 col-2 col-4";
-    }
+    
+  }
+
+}
+
+.strong-points__image {
+    width: 310px;
+    height: 450px;
+}
+
 .strong-points__slider-text {
-    grid-area: col-3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
+order:-1; 
+padding: 0;
+width: 201px;
+height: 450px;
 }
 
 
-.strong-points__list-title {
-    line-height: 1;
-}
+
 
 .strong-points__strengths-list{
-    font-family: 'Bitter', serif;
-    font-size: 24px;
+    gap:8px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    line-height: 1.2;
-    align-items: flex-start;
-    justify-content: flex-end;
 }
 
 .strong-points__strengths-item{
+    
+    font-family: 'Bitter', serif;
     font-size: 24px;
     line-height: 1.2;
 }
     
 
+
+/*  footer блок */
+.footer__container {
+    color: #ffffff;
+    flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 30px 16px 30px 16px;
 }
 
+.footer {
+    background-color: #000000;
+}
+
+.footer__contact-info {
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.6;
+    order: 2;
+    align-self: flex-start;
+}
+
+.footer__product-info {
+    font-size: 18px;
+    order: 1;
+    align-self: flex-end; 
+}
+
+.footer__product-info strong {
+    font-size: 24px;
+    font-weight: 900;
+    
+}
+.footer__copyrights{
+    order:3;
+    align-self: flex-start;
+}
+
+
+/* вставка */
+}
 
 
  @media screen and (max-width:566px) {
