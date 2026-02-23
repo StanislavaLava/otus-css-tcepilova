@@ -389,7 +389,7 @@ img {
     padding-left: 118px;
 }
 
-@supports not (display: grid) {
+@supports  (display: grid) {
     .strong-points__container {
         display: grid;
         grid-template-areas:
@@ -414,7 +414,7 @@ img {
     max-width: 100%;
 }
 
-@supports not (display: grid) {
+@supports (display: grid) {
     .strong-points__slider {
         grid-area: slider;
         display: grid;
@@ -815,7 +815,7 @@ img {
 }
 
 
-@supports not (display: grid) {
+@supports  (display: grid) {
 .strong-points__slider{
     display: grid;
     grid-template-columns: 201px 310px 310px 310px;
