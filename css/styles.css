@@ -352,13 +352,13 @@ h4 {
 }
 
 
-
-    /* Fallback: flex для старых браузеров */
+/* Fallback: flex для старых браузеров */
 .strong-points__container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 1560px;/* Чтобы контент внутри слайдера влез весь на широких экранах */
+    max-width: 1560px;
+    /* Чтобы контент внутри слайдера влез весь на широких экранах */
     padding: 0;
 }
 
@@ -366,7 +366,7 @@ h4 {
     padding-left: 118px;
 }
 
-@supports (display: grid) {
+@supports  (display: grid) {
     .strong-points__container {
         display: grid;
         grid-template-areas:
@@ -391,7 +391,7 @@ h4 {
     max-width: 100%;
 }
 
-@supports  (display: grid) {
+@supports (display: grid) {
     .strong-points__slider {
         grid-area: slider;
         display: grid;
@@ -418,24 +418,18 @@ h4 {
 .strong-points__slider-text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
     gap: 28px;
-    padding: 0px 9px 18px 9px;
+    align-items: center;
     width: 450px;
 }
 
 .strong-points__strengths-list-title {
     line-height: 1;
-    display: flex;
-    align-items: flex-end;
+
 
 }
 
-.strong-points__strengths-list {
-    padding-right: 16px;
-    padding-bottom: 3px;
-}
+
 
 .strong-points__strengths-item {
     font-family: "Bitter", serif;
@@ -457,7 +451,7 @@ h4 {
 }
 
 .footer__contact-info {
-font-style: normal;
+    font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
 
