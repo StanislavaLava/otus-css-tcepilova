@@ -19,7 +19,7 @@ body {
 
 .container {
     max-width: 1440px;
-    min-width: 320px;
+    min-width: 350px;
     margin: 0 auto;
     padding: 0 20px 0 20px;
 
@@ -64,6 +64,7 @@ h4 {
 img {
     max-width: 100%;
 }
+
 
 
 /* ========================================================================
@@ -192,6 +193,9 @@ img {
     align-self: flex-start;
     margin: 0 80px 0 30px
 }
+
+
+
 
 .biography__image {
     width: 49%;
@@ -418,8 +422,6 @@ img {
 
 }
 
-
-
 .strong-points__slider {
     display: flex;
     overflow-x: auto;
@@ -586,6 +588,15 @@ img {
 
     }
 
+
+        @media (max-width: 768px) and (min-resolution: 200dpi),
+        (max-width: 768px) and (min-resolution: 1.5dppx) {
+            .hero {
+                background-image: url("../img/hero-section-bkg-tablet@2x.jpg");
+            }
+        }
+
+
     .hero__container {
         height: 100%;
         width: 100%;
@@ -632,7 +643,7 @@ img {
         padding: 0 16px 0 0;
     }
 
-    .biography__name:before {
+    .biography__name::before {
         content: "-";
         
     }
@@ -808,9 +819,7 @@ img {
     display: block;
 }
 
-picture {
-    height: 100%;
-}
+
 
 .testimonials__img {
     width: 100%;
@@ -839,7 +848,9 @@ picture {
 .strong-points {
     margin-bottom: 80px;
     margin-left: 0;
+
 }
+
 
 
 .strong-points__title {
@@ -870,10 +881,11 @@ height: 450px;
 
 
 .strong-points__strengths-list{
-    gap:8px;
+    
     display: flex;
     flex-direction: column;
     text-align: left;
+    gap:8px;
 }
 
 .strong-points__strengths-item{
@@ -941,6 +953,11 @@ height: 450px;
     width: 100%;
     justify-content: space-around;
 }
+    .nav__icon {
+        display: block;
+}
+
+
 
 /* ========================================================================
 -----------  Biography block | MOBILE   -----------------------------------
@@ -962,16 +979,14 @@ height: 450px;
 -----------  Testimonials block | MOBILE   -------------------------------
 ========================================================================== */
 
-.nav__icon {
-display: block;
-}
 
 picture {
     width: 100%;
-    height: 330px;
 }
 
+
 .testimonials__img {
+
     width: 100%;
     height: 330px;
     object-fit: cover;
@@ -1007,9 +1022,7 @@ picture {
 -----------  Designers block | MOBILE   -------------------------------
 ========================================================================== */
 
-.designers__slider {
-    justify-self: auto;
-}
+
 
 /* ========================================================================
 -----------  Strong-points block | MOBILE   -------------------------------
