@@ -30,16 +30,24 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#biography" class="nav__link">Biography</a>
+            <a href="#biography" class="nav__link">
+              <span class="nav__link-short">B</span><span class="nav__link-long">Biography</span>
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#designers" class="nav__link">Designers</a>
+            <a href="#designers" class="nav__link">
+              <span class="nav__link-short">D</span><span class="nav__link-long">Designers</span>
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#testimonials" class="nav__link">Testimonials</a>
+            <a href="#testimonials" class="nav__link">
+              <span class="nav__link-short">T</span><span class="nav__link-long">Testimonials</span>
+            </a>
           </li>
           <li class="nav__item">
-            <a href="#strong-points" class="nav__link">Strong points</a>
+            <a href="#strong-points" class="nav__link">
+              <span class="nav__link-short">S</span><span class="nav__link-long">Strong points</span>
+            </a>
           </li>
         </ul>
         <button class="header-btn">
@@ -51,31 +59,43 @@
 
   <main class="main content">
     <section class="hero">
-      <!-- <img src="img/hero-section-bkg.jpg" alt="hero-section"> - добавить в css -->
       <div class="container hero__container">
-        <h2 class="hero-section__title">Mod Studio</h2>
-        <p class="hero-section__info">Modern Web Studio</p>
+        <div class="hero__info">
+          <h2 class="hero__title">Mod Studio</h2>
+          <p class="hero__subtitle">Modern Web Studio</p>
+        </div>
       </div>
     </section>
 
     <section class="biography" id="biography">
       <div class="container biography__container">
-        <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" />
+        <img class="biography__image" src="img/biography.jpg" srcset="img/biography-mobile.jpg 450w,
+                       img/biography-mobile@2x.jpg 450w 2x,
+                       img/biography-tablet.jpg 768w,
+                       img/biography-tablet@2x.jpg 768w 2x,
+                       img/biography.jpg 1200w,
+                       img/biography@2x.jpg 1200w 2x" sizes="(max-width: 566px) 100vw, (max-width: 768px) 50vw" alt="Woman walking across sand dunes">
+        <!-- <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" /> -->
         <div class="biography__title">
           <h3 class="biography__title-text">Biography</h3>
         </div>
         <div class="biography__info">
-          <h2 class="biography__name">
-            Katya <br>Mills
-          </h2>
-          <p class="biography__role">
-            Art Director <br>Scenography / Styling / Creative Photography / Design
-          </p>
+          <h2 class="biography__name">Katya<br> Mills</h2>
+          <div class="biography__info-skills">
+            <p class="biography__role">Art Director</p>
+            <ul class="biography__skill-list">
+              <li class="biography__list-item">Scenography</li>
+              <li class="biography__list-item">Styling</li>
+              <li class="biography__list-item">Creative Photography</li>
+              <li class="biography__list-item">Design</li>
+            </ul>
+          </div>
+          <!--<br>Scenography / Styling / Creative Photography / Design-->
           <blockquote class="biography__quote">
-            "The more I deal with the work
-            as something that is my own,
-            as something that is personal,
-            the more successful it is."
+            <p>“The more I deal with<br class="biography__quote-tablet">
+              the work as something that is my own,<br class="biography__quote-tablet">
+              as something that<br class="biography__quote-tablet">
+              is personal, the more successful it is.”</p>
           </blockquote>
         </div>
       </div>
@@ -125,33 +145,36 @@
 
     <section class="testimonials" id="testimonials">
       <div class="container testimonials__container">
-        <div>
-        </div>
-        <ul class="testimonials__list">
-          <li class="testimonials__site">
+        <div class="testimonials__space-desktop"></div>
+        <ul class="testimonials__site-list">
+          <li class="testimonials__site-item">
             <p class="testimonials__site-name">Website</p>
             <a href="#" class="testimonials__site-link">www.whitepapers.com</a>
           </li>
-          <li class="testimonials__site">
+          <li class="testimonials__site-item">
             <p class="testimonials__site-name">Creativity</p>
             <a href="#" class="testimonials__site-link">www.whitepapers.com</a>
           </li>
-          <li class="testimonials__site">
+          <li class="testimonials__site-item">
             <p class="testimonials__site-name">Creativity</p>
             <a href="#" class="testimonials__site-link">www.whitepapers.com</a>
           </li>
         </ul>
-        <img src="img/testimonials-1.jpg" alt="Modern Cafe Interior" class="testimonials__big-img" />
+<img class="testimonials__big-img" src="img/testimonials-1.jpg" alt="Modern Cafe Interior" />
         <h3 class="testimonials__title">Testimonials</h3>
         <div class="testimonials__content">
           <blockquote class="testimonials__quote">
-            <p class="testimonials__text">I just really want to do good work and work with some great people, people who
-              challenge me.</p>
+            <p class="testimonials__text">I just really want<br class="testimonials__text-tablet">
+              to do good work and work <br class="testimonials__text-tablet">
+              with some great people,<br class="testimonials__text-tablet">
+              people who challenge<br class="testimonials__text-tablet"> me.</p>
           </blockquote>
-          <img src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" class="testimonials__img" />
+          <picture>
+            <source srcset="img/testimonials-2-medium.jpg" media="(max-width: 768px)" />
+            <img class="testimonials__img" src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" />
+          </picture>
         </div>
-        <div>
-        </div>
+        <div class="testimonials__space-desktop"></div>
       </div>
     </section>
 
@@ -168,41 +191,36 @@
           </li>
           <li class="strong-points__slider-item strong-points__slider-text">
             <h2 class="strong-points__strengths-list-title">Strengths</h2>
-          <ul class="strong-points__strengths-list">
-            <li class="strong-points__strengths-item">Interiors</li>
-            <li class="strong-points__strengths-item">Outdoors</li>
-            <li class="strong-points__strengths-item">Portraits</li>
-            <li class="strong-points__strengths-item">Styling</li>
-            <li class="strong-points__strengths-item">Events</li>
-            <li class="strong-points__strengths-item">Architecture</li>
-            <li class="strong-points__strengths-item">Design</li>
-            <li class="strong-points__strengths-item">Celebrations</li>
-            <li class="strong-points__strengths-item">Fashion</li>
-            <li class="strong-points__strengths-item">Nature</li>
-          </ul>
+<ul class="strong-points__strengths-list">
+              <li class="strong-points__strengths-item">Interiors</li>
+              <li class="strong-points__strengths-item">Outdoors</li>
+              <li class="strong-points__strengths-item">Portraits</li>
+              <li class="strong-points__strengths-item">Styling</li>
+              <li class="strong-points__strengths-item">Events</li>
+              <li class="strong-points__strengths-item">Architecture</li>
+              <li class="strong-points__strengths-item">Design</li>
+              <li class="strong-points__strengths-item">Celebrations</li>
+              <li class="strong-points__strengths-item">Fashion</li>
+              <li class="strong-points__strengths-item">Nature</li>
+            </ul>
           </li>
-        <li class="strong-points__slider-item">
-          <img class="strong-points__image" src="img/strong-points-3.jpg" alt="Modern Cafe Interior">
-        </li>
+          <li class="strong-points__slider-item">
+            <img class="strong-points__image" src="img/strong-points-3.jpg" alt="Modern Cafe Interior">
+          </li>
         </ul>
       </div>
     </section>
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="container footer__container">
       <address class="footer__contact-info">
         <p><a class="footer__phone" href="tel:+79211234567">+7 921 123-45-67</a></p>
         <p><a class="footer__mail" href="mailto:info@modstudio.com">info@modstudio.com</a></p>
       </address>
-      <div>
-        <p class="footer__product-info">A product of <strong>MOD</strong></p>
-      </div>
-      <div>
-        <p class="footer__copyrights">© 2023 Mod Media. All rights reserved</p>
-      </div>
+      <p class="footer__product-info">A product of <strong>MOD</strong></p>
+      <p class="footer__copyrights">© 2023 Mod Media. All rights reserved</p>
     </div>
   </footer>
 </body>
-
 </html>
