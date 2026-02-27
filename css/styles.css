@@ -154,9 +154,7 @@ h4 {
 
 }
 
-.strong-points {
-    display: none;
-}
+
 
 
 /* biography блок */
@@ -176,7 +174,7 @@ h4 {
 /*  width: 12%;*/
 
 .biography__title {
-    /*transform: rotate(-90deg) translateX(-44%);*/
+   
     writing-mode: sideways-lr;
     align-self: flex-start;
     margin: 0 80px 0 30px
@@ -285,12 +283,13 @@ h4 {
 /* testimonials блок */
 
 .testimonials {
-    padding: 150px 0 150px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .testimonials__container {
     display: grid;
-    grid-template-columns: 11.5% 5.5% 32.5% min-content 29.5% 8.5%;
+    grid-template-columns: 11% 6% 32% min-content 30% 9%;
     justify-items: center;
 }
 
@@ -308,7 +307,7 @@ h4 {
     justify-content: space-around
 }
 
-.testimonials__left-img {
+.testimonials__big-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -317,18 +316,18 @@ h4 {
 .testimonials__title {
     writing-mode: sideways-lr;
     align-self: flex-start;
-    margin: 2px 73px 0 13px;
+    margin: 0px 68px 0 25px
 }
 
 
-.testimonials__right-content {
+.testimonials__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
-.testimonials__right-img {
+.testimonials__img {
     margin-top: 42px;
 }
 
@@ -347,33 +346,123 @@ h4 {
 
 /* strong-points блок */
 
+.strong-points {
+    margin-left: 20px;
+    margin-bottom: 151px;
+}
 
-/* .strong-points__list-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 86px;
-    font-weight: 500;
-    } */
-.strong-points__list {
-    font-family: 'Bitter', serif;
+
+/* Fallback: flex для старых браузеров */
+.strong-points__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1560px;
+    /* Чтобы контент внутри слайдера влез весь на широких экранах */
+    padding: 0;
+}
+
+.strong-points__title {
+    padding-left: 118px;
+}
+
+@supports  (display: grid) {
+    .strong-points__container {
+        display: grid;
+        grid-template-areas:
+            "title"
+            "slider";
+        justify-content: center;
+    }
+
+    .strong-points__title {
+        grid-area: title;
+        text-align: left;
+        padding-left: 118px;
+    }
+
+}
+
+.strong-points__slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 21px;
+    max-width: 100%;
+}
+
+@supports (display: grid) {
+    .strong-points__slider {
+        grid-area: slider;
+        display: grid;
+        gap: 21px;
+        grid-template-columns: 335px 335px 450px 335px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-self: center;
+        max-width: 100%;
+    }
+
+}
+
+.strong-points__image {
+
+    width: 335px;
+}
+
+.strong-points__slider-item {
+    flex: 0 0 auto;
+}
+
+
+.strong-points__slider-text {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    width: 450px;
+}
+
+.strong-points__strengths-list-title {
+    line-height: 1;
+
+
+}
+
+
+
+.strong-points__strengths-item {
+    font-family: "Bitter", serif;
     font-size: 34px;
+    line-height: 1.23;
 }
 
-footer {
-    font-weight: 500;
+/*  footer блок */
+.footer__container {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 20px;
 }
 
-.address a {
+.footer {
+    background-color: #000000;
+}
+
+.footer__contact-info {
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
-    cursor: pointer;
+
+    line-height: 1.6;
 }
 
-.product__info {
+.footer__product-info {
     font-size: 18px;
 }
 
-.product__info span {
+.footer__product-info strong {
     font-size: 24px;
     font-weight: 900;
 }
