@@ -213,7 +213,7 @@ img {
     
 }
 
-.biography__info-skills{
+.biography__skills{
     font-weight: 500;
     font-size: 18px;
     line-height: 1.17;
@@ -253,7 +253,7 @@ img {
     line-height: 1.19;
 }
 
-.biography__quote-tablet {
+.biography__quote br{
     display:none;
 }
 
@@ -300,7 +300,7 @@ img {
     line-height: 1.18;
 }
 
-.designers__skills {
+.designers__label {
     font-weight: 700;
 }
 
@@ -308,7 +308,7 @@ img {
     margin-bottom: 21px;
 }
 
-.designers__info {
+.designers__content {
     margin-left: 239px;
 }
 
@@ -372,7 +372,7 @@ img {
     margin: 0 auto;
 }
 
-.testimonials__text-tablet {
+.testimonials__text br {
     display: none;
 }
 
@@ -450,7 +450,7 @@ img {
 }
 
 
-.strong-points__slider-text {
+.strong-points__slider-content {
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -681,7 +681,7 @@ img {
         list-style-type: "- ";
     }
 
-    .biography__info-skills {
+    .biography__skills {
         margin: 0 0 23px 0;
         font-size: 18px;
         font-weight: 500;
@@ -704,7 +704,7 @@ img {
         margin-bottom: 85px;
     }
 
-    .biography__quote-tablet {
+    .biography__quote br {
         display: block;
     }
 
@@ -738,7 +738,7 @@ img {
         object-fit: cover;
     }
 
-    .designers__info {
+    .designers__content {
         margin-left: 0;
     }
     /* .designers__image-big-size {
@@ -756,7 +756,7 @@ img {
     margin: 80px 0;
 }
 
-.testimonials__space-desktop, .testimonials__big-img {
+.testimonials__spacer, .testimonials__big-img {
     display: none;
 }
 
@@ -778,7 +778,7 @@ img {
     display: none;
 }
 
-.testimonials__text-tablet {
+.testimonials__text br {
     display: block;
 }
 
@@ -809,7 +809,7 @@ img {
     justify-self: flex-start;
 }
 
-.testimonials__text-tablet {
+.testimonials__text br {
     display: block;
 }
 
@@ -863,7 +863,7 @@ img {
     height: 450px;
 }
 
-.strong-points__slider-text {
+.strong-points__slider-content {
 order:-1; 
 padding: 0;
 width: 201px;
@@ -990,7 +990,7 @@ picture {
     gap: 18px;
 }
 
-.testimonials__text-tablet:nth-child(1) {
+.testimonials__text br:nth-child(1) {
     display: none;
 }
 
