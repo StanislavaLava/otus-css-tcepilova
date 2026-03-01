@@ -1,0 +1,1024 @@
+@import 'fonts.css';
+
+
+/* ========================================================================
+----------- Общие стили | DESKTOP   -------------------------------
+========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 350px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 86px;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 86px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* ========================================================================
+-----------  HEADER | DESKTOP   -------------------------------
+========================================================================== */
+.header {
+    height: 135px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+
+}
+
+
+.logo {
+    font-size: clamp(32px, 8.03vw - 29.6px, 86px);
+    line-height: 1.1;
+
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(16px, 4vw, 55px);
+    align-items: center;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.nav__item {
+    text-align: center;
+}
+
+.nav__link-short {
+    display: none;
+}
+
+.header-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    color: transparent;
+}
+
+
+/* ========================================================================
+----------- Hero block | DESKTOP   -------------------------------
+========================================================================== */
+
+.hero {
+    display: flex;
+    background-image: url('../img/hero-section-bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 630px;
+
+}
+
+.hero__container {
+    width: 47.9%;
+    background-color: #ffffff;
+}
+
+.hero__title {
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+.hero__info {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero__subtitle  {
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ========================================================================
+----------- Biography block | DESKTOP   -------------------------------
+========================================================================== */
+.biography {
+    padding: 150px 137px;
+}
+
+.biography__container {
+    display: flex;
+    max-width: 1165px;
+    padding: 0;
+}
+
+
+.biography__title {
+
+    writing-mode: sideways-lr;
+    align-self: flex-start;
+    margin: 0 80px 0 30px
+}
+
+
+
+
+.biography__image {
+    width: 49%;
+    object-fit: cover;
+}
+
+
+.biography__info {
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.biography__name {
+    line-height: 1.33;
+    
+}
+
+.biography__skills{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+}
+
+.biography__role {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.17;
+    }
+
+.biography__skill-list {
+    list-style-type: " / ";
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.biography__list-item:first-child {
+    list-style-type: none;
+}
+
+.biography__quote::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 6px;
+    background: #000000;
+    margin-bottom: 15px;
+}
+
+.biography__quote {
+    position: relative;
+    font-family: 'Bitter', serif;
+    font-size: 26px;
+    max-width: 377px;
+    line-height: 1.19;
+}
+
+.biography__quote br{
+    display:none;
+}
+
+/* ========================================================================
+----------- Designers block | DESKTOP   -------------------------------
+========================================================================== */
+
+.designers {
+    padding-left: 20px;
+}
+
+.designers__container {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "list";
+    gap: 30px;
+    justify-content: center;
+    /* ← центрирует всю сетку */
+}
+
+
+.designers__title {
+    grid-area: title;
+    text-align: left;
+    padding-left: 118px;
+}
+
+.designers__list {
+    grid-area: list;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 572px repeat(3, 337px);
+    gap: 20px;
+    align-items: end;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-self: center;
+    max-width: 100%;
+}
+
+.designers__item {
+    line-height: 1.18;
+}
+
+.designers__label {
+    font-weight: 700;
+}
+
+.designers__image {
+    margin-bottom: 21px;
+}
+
+.designers__content {
+    margin-left: 239px;
+}
+
+
+/* ========================================================================
+----------- Testimonials block | DESKTOP   -------------------------------
+========================================================================== */
+.testimonials {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.testimonials__container {
+    display: grid;
+    grid-template-columns: 11% 6% 32% min-content 30% 9%;
+    justify-items: center;
+}
+
+.testimonials__site-name {
+    font-weight: 700;
+}
+
+.testimonials__site-item {
+    writing-mode: sideways-lr;
+}
+
+.testimonials__site-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.testimonials__big-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials__title {
+    writing-mode: sideways-lr;
+    align-self: flex-start;
+    margin: 0px 68px 0 25px
+}
+
+.testimonials__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonials__img {
+    margin-top: 42px;
+}
+
+.testimonials__text {
+    max-width: 217px;
+    font-family: "Bitter", serif;
+    font-size: 32px;
+    line-height: 1.18;
+    margin: 0 auto;
+}
+
+.testimonials__text br {
+    display: none;
+}
+
+
+/* ========================================================================
+----------- Strong-points block | DESKTOP   -------------------------------
+========================================================================== */
+
+.strong-points {
+    margin-left: 20px;
+    margin-bottom: 151px;
+}
+
+
+/* Fallback: flex для старых браузеров */
+.strong-points__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Чтобы контент внутри слайдера влез весь на широких экранах без скролла */
+    max-width: 1560px;
+    padding: 0;
+}
+
+.strong-points__title {
+    padding-left: 118px;
+}
+
+@supports  (display: grid) {
+    .strong-points__container {
+        display: grid;
+        grid-template-areas:
+            "title"
+            "slider";
+        justify-content: center;
+    }
+
+    .strong-points__title {
+        grid-area: title;
+        text-align: left;
+        padding-left: 118px;
+    }
+
+}
+
+.strong-points__slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 21px;
+    max-width: 100%;
+}
+
+@supports (display: grid) {
+    .strong-points__slider {
+        grid-area: slider;
+        display: grid;
+        gap: 21px;
+        grid-template-columns: 335px 335px 450px 335px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-self: center;
+        max-width: 100%;
+    }
+
+}
+
+.strong-points__image {
+
+    width: 335px;
+}
+
+.strong-points__slider-item {
+    flex: 0 0 auto;
+}
+
+
+.strong-points__slider-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    width: 450px;
+}
+
+
+.strong-points__strengths-list-title {
+    line-height: 1;
+}
+
+
+.strong-points__strengths-item {
+    font-family: "Bitter", serif;
+    font-size: 34px;
+    line-height: 1.23;
+}
+
+/* ========================================================================
+----------- FOOTER block | DESKTOP   -------------------------------
+========================================================================*/
+
+.footer__container {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 20px;
+}
+
+.footer {
+    background-color: #000000;
+}
+
+.footer__contact-info {
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    line-height: 1.6;
+}
+
+.footer__product-info {
+    font-size: 18px;
+}
+
+.footer__product-info strong {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+/* ========================================================================
+----------- Общие | TABLET   -------------------------------
+========================================================================== */
+
+
+    h2 {
+        font-size: 46px;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+/* ========================================================================
+----------- Header block | TABLET   -------------------------------
+========================================================================== */
+    .header {
+        height: 82px;
+
+    }
+
+    .container {
+        padding: 0 16px;
+        max-width: 768px;
+    }
+
+
+    .logo {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav__list {
+        gap: 70px;
+        margin: 0;
+    }
+
+    .nav__link-long {
+        display: none;
+    }
+
+    .nav__link-short {
+        display: inline-block;
+        width: 12vw;
+        font-family: "Bitter", serif;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    .header-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 89px;
+    }
+
+/* ========================================================================
+----------- Hero block | TABLET   -------------------------------
+========================================================================== */
+    .hero {
+        min-height: 685px;
+        background-image: url('../img/hero-section-bkg-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom left;
+        align-items: start;
+        width: 100%;
+    }
+
+
+        @media (max-width: 768px) and (min-resolution: 200dpi),
+        (max-width: 768px) and (min-resolution: 1.5dppx) {
+            .hero {
+                background-image: url("../img/hero-section-bkg-tablet@2x.jpg");
+            }
+        }
+
+
+    .hero__container {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero__info {
+        min-height: 303px;
+        padding-bottom: 20px;
+    }
+
+    .hero__title {
+        font-size: 70px;
+        line-height: 1.33;
+        align-items: center
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+        line-height: 1.16;
+    }
+
+/* ========================================================================
+----------- Biography block | TABLET   -------------------------------
+========================================================================== */
+    .biography {
+        padding: 80px 0;
+    }
+
+    .biography__container {
+        flex-direction: column;
+        position: relative;
+        padding: 0;
+    }
+
+        .biography__title {
+            writing-mode: horizontal-tb;
+        }
+
+    .biography__title-text {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        padding: 0 16px 0 0;
+    }
+
+    .biography__name::before {
+        content: "-";
+        
+    }
+
+    .biography__name {
+        position: relative;
+        font-weight: 400;
+        font-size: 64px;
+        margin-bottom: 35px;
+        white-space: nowrap;
+        order: 3;
+
+    }
+
+    .biography__name br {
+        display: none;
+    }
+
+
+    .biography__image {
+        max-height: 400px;
+        width: 100%;
+        order: 3;
+    }
+
+
+    .biography__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 14px;
+        order: 2;
+    }
+
+    .biography__skill-list {
+        list-style-type: "- ";
+        flex-direction: column;
+    }
+
+    .biography__list-item:first-child {
+        list-style-type: "- ";
+    }
+
+    .biography__skills {
+        margin: 0 0 23px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.17;
+    }
+
+    .biography__role {
+        margin: 0;
+    }
+
+    .biography__quote::before {
+        display: none;
+    }
+
+    .biography__quote {
+        max-width: 100%;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 85px;
+    }
+
+    .biography__quote br {
+        display: block;
+    }
+
+/* ========================================================================
+-----------  Designers block | TABLET   -------------------------------
+========================================================================== */
+
+    .designers__title {
+        padding-left: 0;
+    }
+
+
+    .designers__list {
+
+        grid-template-columns: repeat(4, 310px);
+        gap: 20px;
+        /*padding-bottom: 20px;*/
+        align-items: end;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        justify-self: center;
+        /* ← центрирует сам слайдер */
+        max-width: 100%;
+    }
+
+
+    .designers__image {
+        width: 310px;
+        height: 439px;
+        object-fit: cover;
+    }
+
+    .designers__content {
+        margin-left: 0;
+    }
+    /* .designers__image-big-size {
+    width:310px;
+    height: 440px;
+    object-fit: cover;
+}*/
+
+
+/* ========================================================================
+-----------  Testimonials block | TABLET   -------------------------------
+========================================================================== */
+
+.testimonials {
+    margin: 80px 0;
+}
+
+.testimonials__spacer, .testimonials__big-img {
+    display: none;
+}
+
+.testimonials__list {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+    flex-direction: row;
+    gap: 22px;
+}
+
+
+.testimonials__container {
+    grid-template-columns: 1fr;
+    gap: 26px;
+}
+
+.testimonials__space-desktop {
+    display: none;
+}
+
+.testimonials__text br {
+    display: block;
+}
+
+
+.testimonials__title {
+    writing-mode: horizontal-tb;
+    text-align: right;
+    margin: 0;
+    width: 100%;
+}
+
+
+.testimonials__content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.testimonials__quote {
+    margin-top: 28px;
+}
+
+.testimonials__text {
+    max-width: 100%;
+    font-size: 30px;
+    font-weight: 300;
+    justify-self: flex-start;
+}
+
+.testimonials__text br {
+    display: block;
+}
+
+
+
+.testimonials__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+.testimonials__site-list { 
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 34px;
+    order: 3;
+}
+
+.testimonials__site-item {
+    flex: 1;
+    writing-mode: horizontal-tb;
+}
+
+/* ========================================================================
+-----------  Strong-points block | TABLET   -------------------------------
+========================================================================== */
+
+.strong-points {
+    margin-bottom: 80px;
+    margin-left: 0;
+
+}
+
+.strong-points__title {
+    padding-left: 0;
+}
+
+
+@supports  (display: grid) {
+.strong-points__slider{
+    display: grid;
+    grid-template-columns: 201px 310px 310px 310px;
+}
+
+    }
+
+.strong-points__image {
+    width: 310px;
+    height: 450px;
+}
+
+.strong-points__slider-content {
+order:-1; 
+padding: 0;
+width: 201px;
+height: 450px;
+}
+
+
+.strong-points__strengths-list{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:8px;
+}
+
+.strong-points__strengths-item{
+    
+    font-family: 'Bitter', serif;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* ========================================================================
+-----------  FOOTER block | TABLET   --------------------------------------
+========================================================================== */
+
+.footer__container {
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 30px 16px 30px 16px;
+}
+
+.footer {
+    background-color: #000000;
+}
+
+.footer__contact-info {
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.6;
+    order: 2;
+    align-self: flex-start;
+}
+
+.footer__product-info {
+    font-size: 18px;
+    order: 1;
+    align-self: flex-end; 
+}
+
+.footer__product-info strong {
+    font-size: 24px;
+    font-weight: 900;
+    
+}
+.footer__copyrights{
+    order:3;
+    align-self: flex-start;
+}   
+    }
+
+
+@media screen and (max-width:566px) {
+
+/* ========================================================================
+-----------  HEADER block | MOBILE   --------------------------------------
+========================================================================== */
+
+.nav__list {
+    gap: 0;
+    width: 100%;
+    justify-content: space-around;
+}
+    .nav__icon {
+        display: block;
+}
+
+
+
+/* ========================================================================
+-----------  Biography block | MOBILE   -----------------------------------
+========================================================================== */
+
+.biography__title-text {
+    padding: 0 25px 0 0;
+}
+
+.biography__info {
+    padding-left: 18px;
+}
+
+.biography__quote {
+    margin-bottom: 30px;
+}
+
+/* ========================================================================
+-----------  Testimonials block | MOBILE   -------------------------------
+========================================================================== */
+
+
+picture {
+    width: 100%;
+}
+
+
+.testimonials__img {
+
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+
+.testimonials__content {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.testimonials__text br:nth-child(1) {
+    display: none;
+}
+
+.testimonials__img {
+    width: 100%;
+}
+
+.testimonials__quote {
+    width: 100%;
+    margin: 0;
+}
+
+.testimonials__text {
+    max-width: 342px;
+    justify-self: center;
+}
+/* ========================================================================
+-----------  Designers block | MOBILE   -------------------------------
+========================================================================== */
+
+
+
+/* ========================================================================
+-----------  Strong-points block | MOBILE   -------------------------------
+========================================================================== */
+
+
+.strong-points__container {
+    padding: 0 0 0 16px;
+}
+    }

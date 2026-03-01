@@ -1,0 +1,116 @@
+.strong-points {
+    margin-left: 20px;
+    margin-bottom: 151px;
+
+    @include tablet {
+        margin-left: 0;
+        margin-bottom: 80px;
+    }
+    
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 1560px;
+        padding: 0;
+
+        @supports (display: grid) {
+            display: grid;
+            grid-template-areas: "title" "slider";
+            justify-content: center;
+        }
+
+        @include tablet {
+            padding: 0 0 0 16px; 
+        }
+    }
+
+    &__title {
+        padding-left: 118px;
+
+        @supports (display: grid) {
+            grid-area: title;
+            text-align: left;
+        }
+
+        @include tablet {
+            padding-left: 0;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 21px;
+        max-width: 100%;
+
+        @supports (display: grid) {
+            display: grid;
+            grid-area: slider;
+            grid-template-columns: 335px 335px 450px 335px;
+            justify-self: center;
+
+            @include tablet {
+                grid-template-columns: 201px 310px 310px 310px;
+            }
+        }
+    }
+
+    &__slider-item {
+        flex: 0 0 auto;
+    }
+
+    &__image {
+        width: 335px;
+
+        @include tablet {
+            width: 310px;
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+
+    &__slider-content {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: center;
+        width: 450px;
+
+        @include tablet {
+            order: -1;
+            width: 201px;
+            height: 450px;
+            padding: 0;
+            align-items: flex-start; 
+        }
+    }
+
+    &__strengths-list-title {
+        line-height: 1;
+    }
+
+    &__strengths-list {
+
+        
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 8px;
+        }
+    }
+
+    &__strengths-item {
+        font-family: $font-quote; // 'Bitter', serif
+        font-size: 34px;
+        line-height: 1.23;
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    }
+}

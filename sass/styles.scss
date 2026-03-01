@@ -1,0 +1,15 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base (База и типографика)
+@import 'base/base';
+@import 'base/typography';
+
+// 3. Sections (Контентные блоки)
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/biography';
+@import 'sections/designers';
+@import 'sections/testimonials';
+@import 'sections/strong-points';
+@import 'sections/footer';

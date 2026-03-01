@@ -1,0 +1,62 @@
+.hero {
+    display: flex;
+    background: url('../img/hero-section-bkg.jpg') no-repeat center / cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 630px;
+
+    @include tablet {
+        min-height: 685px;
+        background-image: url('../img/hero-section-bkg-tablet.jpg');
+        background-position: bottom left;
+        align-items: flex-start;
+        width: 100%;
+
+        @media (min-resolution: 1.5dppx) {
+            background-image: url("../img/hero-section-bkg-tablet@2x.jpg");
+        }
+    }
+
+    &__container {
+        width: 47.9%;
+        background-color: $white;
+
+        @include tablet {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+    }
+
+    &__info {
+        min-height: 360px;
+        @include flex-center-column;
+        gap: 14px;
+
+        @include tablet {
+            min-height: 303px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        line-height: 1.2;
+        text-align: center;
+
+        @include tablet {
+            font-size: 70px;
+            line-height: 1.33;
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1;
+
+        @include tablet {
+            font-size: 18px;
+            line-height: 1.16;
+        }
+    }
+}
