@@ -43,6 +43,12 @@
 .nav {
     display: flex;
 
+    @include tablet {
+        width: 100%;
+        justify-content: space-between;
+        }
+
+
     &__list {
         display: flex;
         justify-content: center;

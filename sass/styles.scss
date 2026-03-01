@@ -6,10 +6,10 @@
 @import 'base/typography';
 
 // 3. Sections (Контентные блоки)
-@import 'sections/header';
-@import 'sections/hero';
-@import 'sections/biography';
-@import 'sections/designers';
-@import 'sections/testimonials';
-@import 'sections/strong-points';
-@import 'sections/footer';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/biography';
+@import 'components/designers';
+@import 'components/testimonials';
+@import 'components/strong-points';
+@import 'components/footer';
