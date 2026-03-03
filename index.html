@@ -7,19 +7,11 @@
   <title>MOD STUDIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter&family=Playfair+Display:wght@500;600&family=Roboto:wght@100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
-
 </head>
 
 <body>
@@ -54,7 +46,15 @@
           </li>
         </ul>
         <button class="header-btn">
-          <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+          <!-- <img class="nav__icon" src="img/Union.svg" alt="Message icon"> -->
+
+          <svg class="modal-icon__img" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="icon message">
+            <path
+              d="M30.4111 10C35.7826 10 40.0801 14.4444 40.0801 20V24.4443C40.0801 29.9999 35.7826 34.4443 30.4111 34.4443H25.3623C20.4207 34.4444 15.5862 36.333 11.8262 39.7773C11.6113 39.8885 11.2891 40 11.0742 40C10.9668 40 10.7519 39.9998 10.6445 39.8887C10.2149 39.6665 10 39.3331 10 38.8887V20C10 14.6182 14.0326 10.2788 19.168 10.0127L19.6689 10H30.4111ZM19.6689 11.5C15.1731 11.5 11.5 15.2248 11.5 20V38.0684C15.425 34.7585 20.3351 32.9444 25.3623 32.9443H30.4111C34.9069 32.9443 38.5801 29.2195 38.5801 24.4443V20C38.5801 15.2248 34.9069 11.5 30.4111 11.5H19.6689ZM21.0293 20.5879C21.7603 20.5879 22.3525 21.1811 22.3525 21.9121C22.3524 22.6429 21.7601 23.2354 21.0293 23.2354C20.2985 23.2353 19.7062 22.6429 19.7061 21.9121C19.7061 21.1812 20.2984 20.588 21.0293 20.5879ZM25.4414 20.5879C26.1723 20.588 26.7646 21.1812 26.7646 21.9121C26.7645 22.6428 26.1721 23.2352 25.4414 23.2354C24.7106 23.2354 24.1174 22.6429 24.1172 21.9121C24.1172 21.1811 24.7104 20.5879 25.4414 20.5879ZM29.8525 20.5879C30.5835 20.5879 31.1768 21.1811 31.1768 21.9121C31.1766 22.6429 30.5834 23.2354 29.8525 23.2354C29.1219 23.2351 28.5295 22.6428 28.5293 21.9121C28.5293 21.1813 29.1218 20.5881 29.8525 20.5879Z"
+              fill="currentColor" />
+          </svg>
+
         </button>
       </nav>
     </div>
@@ -81,11 +81,8 @@
     <section class="biography" id="biography">
       <div class="container biography__container">
         <img class="biography__image" src="img/biography.jpg" srcset="img/biography-mobile.jpg 450w,
-                    img/biography-mobile@2x.jpg 450w 2x,
-                    img/biography-tablet.jpg 768w,
-                    img/biography-tablet@2x.jpg 768w 2x,
-                    img/biography.jpg 1200w,
-                    img/biography@2x.jpg 1200w 2x" sizes="(max-width: 566px) 100vw, (max-width: 768px) 50vw"
+             img/biography-tablet.jpg 768w,
+             img/biography.jpg 1200w" sizes="(max-width: 566px) 100vw, (max-width: 768px) 50vw"
           alt="Woman walking across sand dunes">
         <!-- <img class="biography__image" src="img/biography.jpg" alt="Woman walking across sand dunes" /> -->
         <div class="biography__title">
@@ -122,7 +119,7 @@
         <h3 class="designers__title">Designers</h3>
         <ul class="designers__list">
           <li class="designers__item">
-            <img src="img/designers-1.jpg" alt="Girl standing in an open field" class="designers__image" />
+            <img src="img/designers-1.jpg" alt="Girl standing in an open field" class="designers__image">
             <div class="designers__content">
               <h4 class="designers__name">Jess Wonder</h4>
               <p class="designers__details">
@@ -132,7 +129,7 @@
             </div>
           </li>
           <li class="designers__item">
-            <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" class="designers__image" />
+            <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" class="designers__image">
             <h4 class="designers__name">Kameron Clein</h4>
             <p class="designers__details">
               <span class="designers__label">From/</span> Be more flower<br>
@@ -140,7 +137,7 @@
             </p>
           </li>
           <li class="designers__item">
-            <img src="img/designers-3.jpg" alt="Hands holding glasses,coffee and a notebook" class="designers__image" />
+            <img src="img/designers-3.jpg" alt="Hands holding glasses,coffee and a notebook" class="designers__image">
             <h4 class="designers__name">Louisse Red</h4>
             <p class="designers__details">
               <span class="designers__label">From/</span> Be more flower<br>
@@ -148,7 +145,7 @@
             </p>
           </li>
           <li class="designers__item">
-            <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" class="designers__image" />
+            <img src="img/designers-2.jpg" alt="Hands holding a folder and a notebook" class="designers__image">
             <h4 class="designers__name">Kameron Clein</h4>
             <p class="designers__details">
               <span class="designers__label">From/</span> Be more flower<br>
@@ -180,7 +177,7 @@
             <a href="#" class="testimonials__site-link">www.whitepapers.com</a>
           </li>
         </ul>
-        <img class="testimonials__big-img" src="img/testimonials-1.jpg" alt="Modern Cafe Interior" />
+        <img class="testimonials__big-img" src="img/testimonials-1.jpg" alt="Modern Cafe Interior">
         <h3 class="testimonials__title">Testimonials</h3>
         <div class="testimonials__content">
           <blockquote class="testimonials__quote">
@@ -190,8 +187,8 @@
               people who challenge<br> me.</p>
           </blockquote>
           <picture>
-            <source srcset="img/testimonials-2-medium.jpg" media="(max-width: 768px)" />
-            <img class="testimonials__img" src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag" />
+            <source srcset="img/testimonials-2-medium.jpg" media="(max-width: 768px)">
+            <img class="testimonials__img" src="img/testimonials-2.jpg" alt="Person walking with a mesh tote bag">
           </picture>
         </div>
         <div class="testimonials__spacer"></div>
