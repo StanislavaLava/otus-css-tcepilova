@@ -1,4 +1,39 @@
-@import '../fonts.css';
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Roboto-Regular.eot") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Roboto-Medium.eot") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Roboto-Bold.eot") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/Roboto-Black.eot") format("embedded-opentype"), url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Medium.ttf") format("truetype"), url("../fonts/PlayfairDisplay-Medium.woff") format("woff"), url("../fonts/PlayfairDisplay-Medium.eot") format("embedded-opentype");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-SemiBold.ttf") format("truetype"), url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff"), url("../fonts/PlayfairDisplay-SemiBold.eot") format("embedded-opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,37 +76,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-h1,
-h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 86px;
-  line-height: 1.2;
-}
-
-h1 {
-  font-weight: 600;
-}
-
-h2 {
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 46px;
-    font-weight: 400;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 700;
-}
-@media screen and (max-width: 768px) {
-  h3 {
-    font-size: 18px;
-  }
 }
 
 h1,
@@ -305,6 +309,23 @@ h4 {
     position: relative;
   }
 }
+.biography__picture {
+  width: 49%;
+}
+@media screen and (max-width: 768px) {
+  .biography__picture {
+    max-height: 400px;
+    width: 100%;
+    order: 3;
+  }
+}
+.biography__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .biography__title {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -328,18 +349,6 @@ h4 {
 @media screen and (max-width: 566px) {
   .biography__title-text {
     padding: 0 25px 0 0;
-  }
-}
-.biography__image {
-  width: 49%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (max-width: 768px) {
-  .biography__image {
-    max-height: 400px;
-    width: 100%;
-    order: 3;
   }
 }
 .biography__info {
