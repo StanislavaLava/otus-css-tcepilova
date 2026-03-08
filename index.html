@@ -12,6 +12,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <script src="https://kit.fontawesome.com/5b5668dddb.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -26,27 +28,36 @@
         <ul class="nav__list">
           <li class="nav__item">
             <a href="#biography" class="nav__link">
-              <span class="nav__link-short">B</span><span class="nav__link-long">Biography</span>
+              <span class="nav__link-short">B</span>
+              <span class="nav__link-long">Biography</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#designers" class="nav__link">
-              <span class="nav__link-short">D</span><span class="nav__link-long">Designers</span>
+              <span class="nav__link-short">D</span>
+              <span class="nav__link-long">Designers</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#testimonials" class="nav__link">
-              <span class="nav__link-short">T</span><span class="nav__link-long">Testimonials</span>
+              <span class="nav__link-short">T</span>
+              <span class="nav__link-long">Testimonials</span>
             </a>
           </li>
           <li class="nav__item">
             <a href="#strong-points" class="nav__link">
-              <span class="nav__link-short">S</span><span class="nav__link-long">Strong points</span>
+              <span class="nav__link-short">S</span>
+              <span class="nav__link-long">Strong points</span>
             </a>
           </li>
         </ul>
-        <button class="header-btn">
-          <img class="nav__icon" src="img/Union.svg" alt="Message icon">
+        <button class="header-btn" type="button" id="header-btn" onclick="openForm()">
+          <svg class="modal-icon__img" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="icon message">
+            <path
+              d="M30.4111 10C35.7826 10 40.0801 14.4444 40.0801 20V24.4443C40.0801 29.9999 35.7826 34.4443 30.4111 34.4443H25.3623C20.4207 34.4444 15.5862 36.333 11.8262 39.7773C11.6113 39.8885 11.2891 40 11.0742 40C10.9668 40 10.7519 39.9998 10.6445 39.8887C10.2149 39.6665 10 39.3331 10 38.8887V20C10 14.6182 14.0326 10.2788 19.168 10.0127L19.6689 10H30.4111ZM19.6689 11.5C15.1731 11.5 11.5 15.2248 11.5 20V38.0684C15.425 34.7585 20.3351 32.9444 25.3623 32.9443H30.4111C34.9069 32.9443 38.5801 29.2195 38.5801 24.4443V20C38.5801 15.2248 34.9069 11.5 30.4111 11.5H19.6689ZM21.0293 20.5879C21.7603 20.5879 22.3525 21.1811 22.3525 21.9121C22.3524 22.6429 21.7601 23.2354 21.0293 23.2354C20.2985 23.2353 19.7062 22.6429 19.7061 21.9121C19.7061 21.1812 20.2984 20.588 21.0293 20.5879ZM25.4414 20.5879C26.1723 20.588 26.7646 21.1812 26.7646 21.9121C26.7645 22.6428 26.1721 23.2352 25.4414 23.2354C24.7106 23.2354 24.1174 22.6429 24.1172 21.9121C24.1172 21.1811 24.7104 20.5879 25.4414 20.5879ZM29.8525 20.5879C30.5835 20.5879 31.1768 21.1811 31.1768 21.9121C31.1766 22.6429 30.5834 23.2354 29.8525 23.2354C29.1219 23.2351 28.5295 22.6428 28.5293 21.9121C28.5293 21.1813 29.1218 20.5881 29.8525 20.5879Z"
+              fill="currentColor" />
+          </svg>
         </button>
       </nav>
     </div>
@@ -239,6 +250,54 @@
       <p class="footer__copyrights">© 2023 Mod Media. All rights reserved</p>
     </div>
   </footer>
-</body>
 
+  <!-- =============================================== -->
+  <!--                   FORM-getInTouch               -->
+  <!-- =============================================== -->
+
+  <div class="modal" id="modalGetInTouch">
+    <form action="#" class="form-get-in-touch">
+      <p class="form-get-in-touch__heading">Get in touch</p>
+      <p class="form-get-in-touch__description">
+        Do you have any questions? Have something to say?<br>
+        Don't be shy, write to us:
+      </p>
+      <label for="name" class="name">
+        Name
+        <input type="text" name="fullname" id="name" placeholder="3+ Characters" autocomplete="name" minlength="3" required>
+        <svg class="name-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.5 9.75C15.9162 9.75 17.875 7.79125 17.875 5.375C17.875 2.95875 15.9162 1 13.5 1C11.0838 1 9.125 2.95875 9.125 5.375C9.125 7.79125 11.0838 9.75 13.5 9.75Z"
+            stroke="#868686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M1 24.125C1 18.6019 6.03688 14.125 12.25 14.125M17.875 24.75L24.125 18.5L21.625 16L15.375 22.25V24.75H17.875Z"
+            stroke="#868686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </label>
+      <label for="email" class="email">
+        E-mail
+        <input type="email" name="email" id="email" placeholder="name@email.com" autocomplete="email" required>
+        <span class="email-icon fa-solid fa-at"></span>
+      </label>
+      <label for="comment" class="comment">
+        Comment
+        <textarea name="comment" id="comment" placeholder="Some text..." autocomplete="off" required></textarea>
+        <svg class="comment-icon" width="26" height="26" viewBox="0 0 26 26" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17.9287 0.0107422C22.3314 0.238855 25.789 3.95924 25.7891 8.57324V12.3838L25.7783 12.8271C25.5651 17.234 22.1895 20.7255 17.9287 20.9463L17.5 20.957H13.1709L12.7734 20.9619C8.6756 21.0598 4.6882 22.6686 1.56543 25.5293C1.38122 25.6245 1.10505 25.7197 0.920898 25.7197C0.828814 25.7197 0.644855 25.72 0.552734 25.625C0.230522 25.4584 0.0491945 25.2186 0.00878906 24.9062L0 24.7676V8.57324C4.77025e-05 3.81039 3.68404 0.000102579 8.28906 0H17.5L17.9287 0.0107422ZM8.28906 2C4.8516 2.0001 2.00005 4.8509 2 8.57324V22.6006C5.2729 20.2397 9.17837 18.957 13.1709 18.957H17.5C20.9373 18.9568 23.789 16.106 23.7891 12.3838V8.57324C23.789 4.85101 20.9373 2.00026 17.5 2H8.28906ZM8.4541 8.95117C9.27791 8.95123 9.94524 9.61858 9.94531 10.4424C9.94531 11.2662 9.27795 11.9345 8.4541 11.9346C7.6302 11.9346 6.96191 11.2663 6.96191 10.4424C6.96199 9.61855 7.63025 8.95117 8.4541 8.95117ZM13.4258 8.95117C14.2496 8.95117 14.9179 9.61855 14.918 10.4424C14.918 11.2663 14.2497 11.9346 13.4258 11.9346C12.602 11.9344 11.9346 11.2662 11.9346 10.4424C11.9346 9.61865 12.6021 8.95134 13.4258 8.95117ZM18.3994 8.95117C19.2232 8.95127 19.8906 9.6186 19.8906 10.4424C19.8906 11.2662 19.2232 11.9345 18.3994 11.9346C17.5755 11.9346 16.9072 11.2663 16.9072 10.4424C16.9073 9.61855 17.5756 8.95117 18.3994 8.95117Z"
+            fill="#868686" />
+        </svg>
+      </label>
+      <div class="form-get-in-touch__btns">
+        <button class="form-get-in-touch__cancel" type="button" onclick="closeForm()">Cancel</button>
+        <button class="form-get-in-touch__send" type="submit">
+          <span class="form-get-in-touch__send-icon fa-regular fa-plus">
+          </span>Send</button>
+      </div>
+    </form>
+  </div>
+  <script src="js/script.js"></script>
+</body>
 </html>

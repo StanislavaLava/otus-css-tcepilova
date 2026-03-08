@@ -1,7 +1,3 @@
-// ===================================
-//           HEADER STYLES
-// ===================================
-
 .header {
   height: 135px;
 
@@ -20,16 +16,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
     padding: 0;
     margin: 0;
+    width: 50px;
+    height: 50px;
     background: transparent;
     border: none;
     cursor: pointer;
     color: $black;
+    transition: all 0.3s ease-in-out;
 
-    // Иконка внутри кнопки
     .modal-icon__img path {
       transition: fill 0.3s ease;
     }
@@ -39,17 +35,17 @@
     }
 
     &:active .modal-icon__img path {
+      outline: 1px solid $light-brown;
       fill: $light-brown;
     }
 
     &:focus:not(:active) {
-      border-radius: 5px;
-      outline: 1.5px solid $light-brown;
-      outline-offset: 5px;
-    }
+      border-radius: 10px;
+      outline: 1px solid $light-brown;
 
-    &:focus:not(:active) .modal-icon__img path {
-      fill: $brown;
+      .modal-icon__img path {
+        fill: $brown;
+      }
     }
 
     @include tablet {
@@ -58,7 +54,6 @@
   }
 }
 
-// Логотип
 .logo {
   font-size: clamp(32px, 8.03vw - 29.6px, 86px);
   line-height: 1.1;
@@ -68,7 +63,6 @@
   }
 }
 
-// Навигация
 .nav {
   display: flex;
 
@@ -109,33 +103,31 @@
     text-decoration: none;
     color: inherit;
 
-    // Hover: подчёркивание у длинной версии
+    // Состояния для десктопной (длинной) ссылки
     &:hover .nav__link-long::after {
       width: 100%;
     }
 
-    // Active: цвет текста у короткой и длинной
-    &:active .nav__link-long,
+    &:active .nav__link-long {
+      color: $light-brown;
+      &::after {
+        width: 0;
+      }
+    }
+
+    // Состояния для мобильной (короткой) ссылки
+    &:hover .nav__link-short {
+      color: $brown;
+    }
+
     &:active .nav__link-short {
       color: $light-brown;
     }
 
-    // Active: убираем подчёркивание у длинной
-    &:active .nav__link-long::after {
-      width: 0;
-    }
-
-    // Focus: обводка как у кнопки
+    // Общий фокус
     &:focus:not(:active) {
-      border-radius: 5px;
       outline: 1.5px solid $light-brown;
-      outline-offset: 10px;
-    }
-
-    // Focus: цвет текста как у кнопки при фокусе
-    &:focus:not(:active) .nav__link-long,
-    &:focus:not(:active) .nav__link-short {
-      color: $brown;
+      border-radius: 5px;
     }
   }
 
@@ -162,7 +154,6 @@
 
   &__link-short {
     display: none;
-    transition: color 0.3s ease-in-out;
 
     @include tablet {
       display: inline-block;
@@ -171,6 +162,7 @@
       font-size: 40px;
       font-weight: 400;
       color: inherit;
+      transition: color 0.3s ease-in-out;
     }
   }
 }
