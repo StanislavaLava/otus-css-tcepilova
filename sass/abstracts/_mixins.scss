@@ -1,0 +1,23 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 566px) {
+        @content;
+    }
+}
+
+@mixin vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

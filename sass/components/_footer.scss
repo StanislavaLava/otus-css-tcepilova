@@ -1,0 +1,51 @@
+.footer {
+    background-color: $black;
+
+    &__container {
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 20px;
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 30px 16px;
+        }
+    }
+
+    &__contact-info {
+        font-style: normal;
+        text-transform: uppercase;
+        line-height: 1.6;
+
+        @include tablet {
+            order: 2;
+            align-self: flex-start;
+        }
+    }
+
+    &__product-info {
+        font-size: 18px;
+
+        strong {
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        @include tablet {
+            order: 1;
+            align-self: flex-end;
+        }
+    }
+
+    &__copyrights {
+        @include tablet {
+            order: 3;
+            align-self: flex-start;
+        }
+    }
+}

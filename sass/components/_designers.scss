@@ -1,0 +1,63 @@
+.designers {
+    padding-left: 20px;
+
+    &__container {
+        display: grid;
+        grid-template-areas: "title" "list";
+        gap: 30px;
+        justify-content: center;
+    }
+
+    &__title {
+        grid-area: title;
+        padding-left: 118px;
+
+        @include tablet {
+            padding-left: 0;
+        }
+    }
+
+    &__list {
+        grid-area: list;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 572px repeat(3, 337px);
+        gap: 20px;
+        align-items: end;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        justify-self: center;
+        max-width: 100%;
+
+        @include tablet {
+            grid-template-columns: repeat(4, 310px);
+        }
+    }
+
+    &__item {
+        line-height: 1.18;
+    }
+
+    &__label {
+        font-weight: 700;
+    }
+
+    &__image {
+        margin-bottom: 21px;
+
+        @include tablet {
+            width: 310px;
+            height: 439px;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        margin-left: 239px;
+
+        @include tablet {
+            margin-left: 0;
+        }
+    }
+}
